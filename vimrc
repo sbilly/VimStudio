@@ -30,7 +30,7 @@ let g:syntastic_check_on_wq = 0
 " nerdtree 
 " ------------------------------------------------------------------------
 " 窗口位置在右
-let g:NERDTreeWinPos="left"
+let g:NERDTreeWinPos="right"
 " 窗口宽度
 let g:NERDTreeWinSize=30
 " 只剩下nerdtree窗口时关闭vim

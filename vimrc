@@ -1,8 +1,6 @@
 execute pathogen#infect() 
 
 
-
-
 " 显示行号
 set number
 " 语法高亮
@@ -15,7 +13,21 @@ set fencs=utf-8,cp936
 nnoremap <F5> :!ctags -R<CR>
 filetype plugin on
 
-" for taglist plugin 
+" vim-airline
+" ------------------------------------------------------------------------
+set laststatus=2
+
+" syntastic
+" ------------------------------------------------------------------------
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" taglist
 " ------------------------------------------------------------------------
 " 选择tag后自动关闭taglist窗口
 "let Tlist_Close_On_Select = 1
@@ -34,7 +46,7 @@ let Tlist_WinWidth = 100
 set updatetime=50
 nnoremap <silent> <F8> :TlistToggle<CR>
 
-" for nerdtree plugin 
+" nerdtree 
 " ------------------------------------------------------------------------
 " 窗口位置在右
 let g:NERDTreeWinPos="right"

@@ -5,6 +5,8 @@ execute pathogen#infect()
 set number
 " 语法高亮
 syntax on
+" 高亮当前行
+set cursorline 
 " 智能缩进
 set smartindent
 " 字符编码自动识别

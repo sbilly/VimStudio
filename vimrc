@@ -27,6 +27,19 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" nerdtree 
+" ------------------------------------------------------------------------
+" 窗口位置在右
+let g:NERDTreeWinPos="right"
+" 窗口宽度
+let g:NERDTreeWinSize=30
+" 只剩下nerdtree窗口时关闭vim
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" 启动vim时自动打开
+autocmd vimenter * NERDTree
+
+nnoremap <silent> <F9> :NERDTreeToggle<CR>
+
 " taglist
 " ------------------------------------------------------------------------
 " 选择tag后自动关闭taglist窗口
@@ -39,20 +52,14 @@ let Tlist_Exit_OnlyWindow=1
 let Tlist_Display_Prototype=1
 " 执行TlistToggle后将焦点移到taglist窗口
 let Tlist_GainFocus_On_ToggleOpen=1
-" 窗口位置在右
-let Tlist_Use_Right_Window = 1
+" 窗口位置(0:左,1:右)
+let Tlist_Use_Right_Window=1
+" vim启动时自动打开
+let Tlist_Auto_Open=1
 " 窗口宽度
-let Tlist_WinWidth = 100
+let Tlist_WinWidth=50
 set updatetime=50
 nnoremap <silent> <F8> :TlistToggle<CR>
-
-" nerdtree 
-" ------------------------------------------------------------------------
-" 窗口位置在右
-let g:NERDTreeWinPos="right"
-" 窗口宽度
-let g:NERDTreeWinSize=70
-nnoremap <silent> <F9> :NERDTreeToggle<CR>
 
 " for OmniCppComplete plugin 
 " ------------------------------------------------------------------------

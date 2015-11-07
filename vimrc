@@ -1,3 +1,8 @@
+execute pathogen#infect() 
+
+
+
+
 " 显示行号
 set number
 " 语法高亮

@@ -1,6 +1,5 @@
 execute pathogen#infect() 
 
-
 " 显示行号
 set number
 " 语法高亮
@@ -62,6 +61,52 @@ autocmd vimenter * NERDTree
 
 nnoremap <silent> <F9> :NERDTreeToggle<CR>
 
+" tagbar
+" ------------------------------------------------------------------------
+" tagbar窗口中不显示多余的帮助信息 
+let g:tagbar_compact=1
+" 窗口宽度 
+let tagbar_width=30 
+" 窗口靠左显示
+let tagbar_left=0
+" 指定对哪些元素生成tag
+let g:tagbar_type_cpp = {
+	\ 'kinds' : [
+		\ 'd:macros:1',
+		\ 'g:enums',
+		\ 't:typedefs:0:0',
+		\ 'e:enumerators:0:0',
+		\ 'n:namespaces',
+		\ 'c:classes',
+		\ 's:structs',
+		\ 's:structs',
+		\ 'u:unions',
+		\ 'f:functions',
+		\ 'm:members:0:0',
+		\ 'v:global:0:0',
+		\ 'x:external:0:0',
+		\ 'l:local:0:0'
+	\ ],
+	\ 'sro'        : '::',
+	\ 'kind2scope' : {
+		\ 'g' : 'enum',
+		\ 'n' : 'namespace',
+		\ 'c' : 'class',
+		\ 's' : 'struct',
+		\ 'u' : 'union'
+	\ },
+	\ 'scope2kind' : {
+		\ 'enum'      : 'g',
+		\ 'namespace' : 'n',
+		\ 'class'     : 'c',
+		\ 'struct'    : 's',
+		\ 'union'     : 'u'
+	\ }
+\ }
+
+nnoremap <silent> <F8> :TagbarToggle<CR>
+
+
 " taglist
 " ------------------------------------------------------------------------
 " 选择tag后自动关闭taglist窗口
@@ -77,11 +122,11 @@ let Tlist_GainFocus_On_ToggleOpen=1
 " 窗口位置(0:左,1:右)
 let Tlist_Use_Right_Window=1
 " vim启动时自动打开
-let Tlist_Auto_Open=1
+let Tlist_Auto_Open=0
 " 窗口宽度
 let Tlist_WinWidth=50
 set updatetime=50
-nnoremap <silent> <F8> :TlistToggle<CR>
+" nnoremap <silent> <F8> :TlistToggle<CR>
 
 " for OmniCppComplete plugin 
 " ------------------------------------------------------------------------

@@ -4,13 +4,24 @@ execute pathogen#infect()
 " 显示行号
 set number
 " 语法高亮
-syntax on
+syntax enable
+" 高亮显示搜索结果
+set hlsearch
 " 高亮当前行
 set cursorline 
+" 总是显示状态栏
+set laststatus=2
 " 智能缩进
 set smartindent
 " 字符编码自动识别
 set fencs=utf-8,cp936
+" 启动vim时不折叠代码
+set nofoldenable
+" 基于缩进进行代码折叠
+set foldmethod=indent
+" 基于语法进行代码折叠
+set foldmethod=syntax
+
 " 执行ctags生成标签文件
 nnoremap <F5> :!ctags -R<CR>
 filetype plugin on
@@ -18,6 +29,15 @@ filetype plugin on
 " vim-airline
 " ------------------------------------------------------------------------
 set laststatus=2
+
+" vim-indent-guides
+" ------------------------------------------------------------------------
+" 打开vim时自动启动
+let g:indent_guides_enable_on_vim_startup=0
+" 从第二层开始可视化显示缩进
+let g:indent_guides_start_level=2
+" 色块宽度
+let g:indent_guides_guide_size=0
 
 " syntastic
 " ------------------------------------------------------------------------

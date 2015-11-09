@@ -84,6 +84,12 @@ let g:NERDTreeWinSize=30
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " 启动vim时自动打开
 autocmd vimenter * NERDTree
+" 显示隐藏文件
+let NERDTreeShowHidden=1
+" 不显示帮助信息
+let NERDTreeMinimalUI=1
+" 删除文件时自动删除文件对应的buffer
+let NERDTreeAutoDeleteBuffer=1
 
 nnoremap <silent> <F9> :NERDTreeToggle<CR>
 

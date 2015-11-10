@@ -1,5 +1,6 @@
 execute pathogen#infect() 
 
+
 " 显示行号
 set number
 " 语法高亮
@@ -22,15 +23,13 @@ set foldmethod=indent
 set foldmethod=syntax
 
 " 执行ctags生成标签文件
-nnoremap <F5> :!ctags -R<CR>
+nnoremap <F2> :!ctags -R<CR><CR>
 filetype plugin on
-
 
 
 " 一键编译
 " ------------------------------------------------------------------------
-nnoremap <F7> :make!<CR><CR>:cw<CR>
-
+nnoremap <silent> <F7> :make!<CR><CR>:cw<CR>
 
 " bduild-in: Quickfix
 " ------------------------------------------------------------------------
@@ -103,7 +102,9 @@ let NERDTreeMinimalUI=1
 " 删除文件时自动删除文件对应的buffer
 let NERDTreeAutoDeleteBuffer=1
 
-nnoremap <silent> <F9> :NERDTreeToggle<CR>
+nnoremap <silent> <C-F9> :NERDTreeToggle<CR>
+nnoremap <silent> <F9> :NERDTree<CR>
+
 
 " plugin: tagbar
 " ------------------------------------------------------------------------

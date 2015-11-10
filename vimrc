@@ -25,7 +25,19 @@ set foldmethod=syntax
 nnoremap <F5> :!ctags -R<CR>
 filetype plugin on
 
-" YouCompleteMe
+
+
+" 一键编译
+" ------------------------------------------------------------------------
+nnoremap <F7> :make!<CR><CR>:cw<CR>
+
+
+" bduild-in: Quickfix
+" ------------------------------------------------------------------------
+" 窗口置于底部
+autocmd FileType qf wincmd J
+
+" plugin: YouCompleteMe
 " ------------------------------------------------------------------------
 " YCM 补全菜单配色
 " 菜单
@@ -51,11 +63,11 @@ let g:ycm_cache_omnifunc=0
 " 语法关键字补全         
 let g:ycm_seed_identifiers_with_syntax=1
 
-" vim-airline
+" plugin: vim-airline
 " ------------------------------------------------------------------------
 set laststatus=2
 
-" vim-indent-guides
+" plugin: vim-indent-guides
 " ------------------------------------------------------------------------
 " 打开vim时自动启动
 let g:indent_guides_enable_on_vim_startup=0
@@ -64,7 +76,7 @@ let g:indent_guides_start_level=2
 " 色块宽度
 let g:indent_guides_guide_size=0
 
-" syntastic
+" plugin: syntastic
 " ------------------------------------------------------------------------
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -74,7 +86,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" nerdtree 
+" plugin: nerdtree 
 " ------------------------------------------------------------------------
 " 窗口位置在右
 let g:NERDTreeWinPos="right"
@@ -93,7 +105,7 @@ let NERDTreeAutoDeleteBuffer=1
 
 nnoremap <silent> <F9> :NERDTreeToggle<CR>
 
-" tagbar
+" plugin: tagbar
 " ------------------------------------------------------------------------
 " tagbar窗口中不显示多余的帮助信息 
 let g:tagbar_compact=1
@@ -138,8 +150,7 @@ let g:tagbar_type_cpp = {
 
 nnoremap <silent> <F8> :TagbarToggle<CR>
 
-
-" taglist
+" plugin: taglist
 " ------------------------------------------------------------------------
 " 选择tag后自动关闭taglist窗口
 "let Tlist_Close_On_Select = 1
@@ -160,7 +171,7 @@ let Tlist_WinWidth=50
 set updatetime=50
 " nnoremap <silent> <F8> :TlistToggle<CR>
 
-" for OmniCppComplete plugin 
+" plugin: OmniCppComplete
 " ------------------------------------------------------------------------
 " configure tags - add additional tags here or comment out not-used ones
 set tags+=~/.vim/tags/cpp
@@ -179,5 +190,5 @@ let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
 let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
 let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 " automatically open and close the popup menu / preview window
-au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
+autocmd CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest,preview

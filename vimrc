@@ -1,6 +1,5 @@
 execute pathogen#infect() 
 
-
 " 显示行号
 set number
 " 语法高亮
@@ -25,6 +24,19 @@ set foldmethod=syntax
 " 执行ctags生成标签文件
 nnoremap <F2> :!ctags -R<CR><CR>
 filetype plugin on
+
+
+" 启用:Man命令查看各类man信息
+source ./ftplugin/man.vim
+" 定义:Man命令查看各类man信息的快捷键
+nmap <Leader>man :Man 3 <cword><CR>
+
+
+
+
+
+
+
 
 
 " 一键编译

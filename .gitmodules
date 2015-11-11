@@ -1,46 +1,61 @@
 [submodule "bundle/gundo"]
 	path = bundle/gundo
 	url = http://github.com/sjl/gundo.vim.git
+	ignore = dirty
 [submodule "bundle/a.vim"]
 	path = bundle/a.vim
 	url = https://github.com/vim-scripts/a.vim
+	ignore = dirty
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+	ignore = dirty
 [submodule "bundle/incsearch.vim"]
 	path = bundle/incsearch.vim
 	url = https://github.com/haya14busa/incsearch.vim
+	ignore = dirty
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
+	ignore = dirty
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+	ignore = dirty
 [submodule "bundle/snipmate.vim"]
 	path = bundle/snipmate.vim
 	url = git://github.com/msanders/snipmate.vim.git
+	ignore = dirty
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic
+	ignore = dirty
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar
+	ignore = dirty
 [submodule "bundle/taglist.vim"]
 	path = bundle/taglist.vim
 	url = https://github.com/Rykka/clickable-things
+	ignore = dirty
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/bling/vim-airline
+	ignore = dirty
 [submodule "bundle/vim-cmake"]
 	path = bundle/vim-cmake
 	url = git://github.com/vhdirk/vim-cmake.git
+	ignore = dirty
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
+	ignore = dirty
 [submodule "bundle/vim-indent-guides"]
 	path = bundle/vim-indent-guides
 	url = git://github.com/nathanaelkane/vim-indent-guides.git
+	ignore = dirty
 [submodule "bundle/vim-signature"]
 	path = bundle/vim-signature
 	url = https://github.com/kshenoy/vim-signature
+	ignore = dirty
 

@@ -22,6 +22,9 @@ set nofoldenable
 set foldmethod=indent
 " 基于语法进行代码折叠
 set foldmethod=syntax
+" 打开指定路径的文件
+nnoremap <F8> :wincmd f<CR>
+
 
 " 执行ctags生成标签文件
 nnoremap <F2> :!ctags -R<CR><CR>
@@ -121,8 +124,8 @@ let NERDTreeMinimalUI=1
 " 删除文件时自动删除文件对应的buffer
 let NERDTreeAutoDeleteBuffer=1
 
-nnoremap <silent> <C-F9> :NERDTreeToggle<CR>
-nnoremap <silent> <F9> :NERDTree<CR>
+nnoremap <silent> <C-F12> :NERDTreeToggle<CR>
+nnoremap <silent> <F12> :NERDTree<CR>
 
 
 " plugin: tagbar
@@ -168,7 +171,7 @@ let g:tagbar_type_cpp = {
 	\ }
 \ }
 
-nnoremap <silent> <F8> :TagbarToggle<CR>
+nnoremap <silent> <F11> :TagbarToggle<CR>
 
 " plugin: taglist
 " ------------------------------------------------------------------------

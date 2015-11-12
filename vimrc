@@ -124,8 +124,8 @@ let NERDTreeMinimalUI=1
 " 删除文件时自动删除文件对应的buffer
 let NERDTreeAutoDeleteBuffer=1
 
-nnoremap <silent> <C-F12> :NERDTreeToggle<CR>
-nnoremap <silent> <F12> :NERDTree<CR>
+nnoremap <silent> <C-F10> :NERDTreeToggle<CR>
+nnoremap <silent> <F10> :NERDTree<CR>
 
 
 " plugin: tagbar

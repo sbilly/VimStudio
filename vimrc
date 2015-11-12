@@ -67,6 +67,18 @@ let g:ycm_cache_omnifunc=0
 " 语法关键字补全         
 let g:ycm_seed_identifiers_with_syntax=1
 
+" plugin: MiniBufExplorer
+" ------------------------------------------------------------------------
+" 自动启动，
+let g:miniBufExplAutoStart=1
+
+" 显示/隐藏MiniBufExplorer窗口
+"map <Leader>bl :MBEToggle<CR>
+" buf切换
+"map <C-Tab> :MBEbn<CR>
+"map <C-S-Tab> :MBEbp<CR>
+
+
 " plugin: vim-airline
 " ------------------------------------------------------------------------
 set laststatus=2

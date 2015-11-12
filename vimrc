@@ -4,6 +4,8 @@ execute pathogen#infect()
 set number
 " 语法高亮
 syntax enable
+" 禁止折行
+set nowrap
 " 高亮显示搜索结果
 set hlsearch
 " 高亮当前行

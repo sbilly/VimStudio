@@ -63,3 +63,7 @@
 	path = bundle/minibufexpl
 	url = https://github.com/fholgado/minibufexpl.vim
 	ignore = dirty
+[submodule "bundle/vim-fswitch"]
+	path = bundle/vim-fswitch
+	url = https://github.com/derekwyatt/vim-fswitch.git
+	ignore = dirty

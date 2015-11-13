@@ -39,7 +39,19 @@ nmap <Leader>man :Man 3 <cword><CR>
 
 " 一键编译
 " ------------------------------------------------------------------------
-nnoremap <silent> <F7> :make!<CR><CR>:cw<CR>
+" Save and make current file.o
+function! Make()
+	let curr_dir = expand('%:h')
+	if curr_dir == ''
+		let curr_dir = '.'
+	endif
+	echo curr_dir
+	execute 'lcd ' . curr_dir
+	execute 'make %:r.o'
+	execute 'lcd -'
+endfunction
+nnoremap <F7> :update<CR>:call Make()<CR>
+"nnoremap <silent> <F7> :make!<CR><CR>:cw<CR>
 
 " bduild-in: Quickfix
 " ------------------------------------------------------------------------

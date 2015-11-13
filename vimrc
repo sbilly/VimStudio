@@ -47,6 +47,7 @@ function! Make()
 	endif
 	echo curr_dir
 	execute 'lcd ' . curr_dir
+	execute 'make clean'
 	execute 'make %:r.o'
 	execute 'lcd -'
 endfunction

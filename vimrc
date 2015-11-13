@@ -10,6 +10,8 @@ set nowrap
 set hlsearch
 " 高亮当前行
 set cursorline 
+" 高亮显示当前列
+set cursorcolumn
 " 总是显示状态栏
 set laststatus=2
 " 智能缩进
@@ -89,6 +91,10 @@ let g:ycm_seed_identifiers_with_syntax=1
 " ------------------------------------------------------------------------
 " 自动启动，
 let g:miniBufExplAutoStart=1
+let g:miniBufExplMapWindowNavArrows=1 
+let g:miniBufExplMapCTabSwitchBufs=1 
+let g:miniBufExplModSelTarget=1 
+
 
 " 显示/隐藏MiniBufExplorer窗口
 "map <Leader>bl :MBEToggle<CR>

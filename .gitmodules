@@ -67,3 +67,7 @@
 	path = bundle/vim-fswitch
 	url = https://github.com/derekwyatt/vim-fswitch.git
 	ignore = dirty
+[submodule "bundle/vim-auto-save"]
+	path = bundle/vim-auto-save
+	url = https://github.com/vim-scripts/vim-auto-save.git
+	ignore = dirty

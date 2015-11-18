@@ -34,10 +34,6 @@
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar
 	ignore = dirty
-[submodule "bundle/taglist.vim"]
-	path = bundle/taglist.vim
-	url = https://github.com/Rykka/clickable-things
-	ignore = dirty
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/bling/vim-airline

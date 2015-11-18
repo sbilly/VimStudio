@@ -197,20 +197,20 @@ nnoremap <silent> <F11> :TagbarToggle<CR>
 " 选择tag后自动关闭taglist窗口
 "let Tlist_Close_On_Select = 1
 " 紧凑样式的taglist
-let Tlist_Compact_Format=1
+"let Tlist_Compact_Format=1
 " 如果只剩下taglist窗口则退出vim
-let Tlist_Exit_OnlyWindow=1
+"let Tlist_Exit_OnlyWindow=1
 " 在taglist窗口中显示原型
-let Tlist_Display_Prototype=1
+"let Tlist_Display_Prototype=1
 " 执行TlistToggle后将焦点移到taglist窗口
-let Tlist_GainFocus_On_ToggleOpen=1
+"let Tlist_GainFocus_On_ToggleOpen=1
 " 窗口位置(0:左,1:右)
-let Tlist_Use_Right_Window=1
+"let Tlist_Use_Right_Window=1
 " vim启动时自动打开
-let Tlist_Auto_Open=0
+"let Tlist_Auto_Open=0
 " 窗口宽度
-let Tlist_WinWidth=50
-set updatetime=50
+"let Tlist_WinWidth=50
+"set updatetime=50
 " nnoremap <silent> <F8> :TlistToggle<CR>
 
 " plugin: OmniCppComplete

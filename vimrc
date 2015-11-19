@@ -4,6 +4,13 @@ execute pathogen#infect()
 set number
 
 set gcr=a:block-blinkon0
+
+set guioptions-=l
+set guioptions-=L
+set guioptions-=r
+set guioptions-=R
+
+
 " 语法高亮
 syntax enable
 " 禁止折行

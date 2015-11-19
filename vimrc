@@ -2,6 +2,8 @@ execute pathogen#infect()
 
 " 显示行号
 set number
+
+set gcr=a:block-blinkon0
 " 语法高亮
 syntax enable
 " 禁止折行

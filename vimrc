@@ -40,18 +40,14 @@ set foldmethod=indent
 set foldmethod=syntax
 " 打开指定路径的文件
 nnoremap <F8> :wincmd f<CR>
-
-
 " 执行ctags生成标签文件
 nnoremap <F2> :!ctags -R<CR><CR>
 filetype plugin on
-
 
 " 启用:Man命令查看各类man信息
 source $VIMRUNTIME/ftplugin/man.vim
 " 定义:Man命令查看各类man信息的快捷键(\man)
 nmap <Leader>man :Man 3 <cword><CR>
-
 
 " 一键编译
 " ------------------------------------------------------------------------
@@ -70,7 +66,40 @@ endfunction
 nnoremap <F7> :update<CR>:call Make()<CR>
 "nnoremap <silent> <F7> :make!<CR><CR>:cw<CR>
 
-" 一键编译
+" 内容替换
+" ------------------------------------------------------------------------
+" 替换函数,参数说明：
+" confirm：是否替换前逐一确认
+" wholeword：是否整词匹配
+" replace：被替换字符串
+function! Replace(confirm, wholeword, replace)
+	wa
+	let flag = ''
+	if a:confirm
+		let flag .= 'gec'
+	else
+		let flag .= 'ge'
+	endif
+	let search = ''
+	if a:wholeword
+		let search .= '\<' . escape(expand('<cword>'), '/\.*$^~[') . '\>'
+	else
+		let search .= expand('<cword>')
+	endif
+	let replace = escape(a:replace, '/\&~')
+	execute 'argdo %s/' . search . '/' . replace . '/' . flag . '| update'
+endfunction
+" 不确认、非整词
+nnoremap <Leader>R :call Replace(0, 0, input('Replace '.expand('<cword>').' with: '))<CR>
+" 不确认、整词
+nnoremap <Leader>rw :call Replace(0, 1, input('Replace '.expand('<cword>').' with: '))<CR>
+" 确认、非整词
+nnoremap <Leader>rc :call Replace(1, 0, input('Replace '.expand('<cword>').' with: '))<CR>
+" 确认、整词
+nnoremap <Leader>rcw :call Replace(1, 1, input('Replace '.expand('<cword>').' with: '))<CR>
+nnoremap <Leader>rwc :call Replace(1, 1, input('Replace '.expand('<cword>').' with: '))<CR>
+
+" 调用wmctrl程序实现全屏 
 " ------------------------------------------------------------------------
 " 将外部命令wmctrl控制窗口最大化的命令行参数封装成一个vim 的函数
 fun! ToggleFullscreen()

@@ -82,6 +82,13 @@ autocmd VimEnter * call ToggleFullscreen()
 " 窗口置于底部
 autocmd FileType qf wincmd J
 
+" pulgin: theme: vim-color-solarized
+" ------------------------------------------------------------------------
+syntax enable
+set background=dark
+colorscheme solarized
+ 
+
 " plugin: YouCompleteMe
 " ------------------------------------------------------------------------
 " YCM 补全菜单配色

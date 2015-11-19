@@ -66,6 +66,17 @@ endfunction
 nnoremap <F7> :update<CR>:call Make()<CR>
 "nnoremap <silent> <F7> :make!<CR><CR>:cw<CR>
 
+" 一键编译
+" ------------------------------------------------------------------------
+" 将外部命令wmctrl控制窗口最大化的命令行参数封装成一个vim 的函数
+fun! ToggleFullscreen()
+	call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")
+endf
+" 全屏开/关快捷键
+map <silent> <F11> :call ToggleFullscreen()<CR>
+" 启动 vim 时自动全屏
+autocmd VimEnter * call ToggleFullscreen()
+
 " bduild-in: Quickfix
 " ------------------------------------------------------------------------
 " 窗口置于底部

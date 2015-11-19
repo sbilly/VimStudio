@@ -3,7 +3,7 @@ execute pathogen#infect()
 " 字体字号
 "set guifont=Monaco:h20
 " use YaHei.Consolas font.
-set guifont=YaHei\ Consolas\ Hybrid\ 11.5
+set guifont=YaHei\ Consolas\ Hybrid\ 13 
 " 显示行号
 set number
 " 禁止光标闪烁

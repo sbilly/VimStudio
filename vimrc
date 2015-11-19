@@ -10,6 +10,9 @@ set guioptions-=L
 set guioptions-=r
 set guioptions-=R
 
+set guioptions-=m
+set guioptions-=T
+
 
 " 语法高亮
 syntax enable

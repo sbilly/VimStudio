@@ -12,7 +12,6 @@ set guioptions-=R
 " 隐藏菜单和工具条
 set guioptions-=m
 set guioptions-=T
-
 " 语法高亮
 syntax enable
 " 禁止折行

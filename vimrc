@@ -1,5 +1,12 @@
 execute pathogen#infect() 
 
+" disable mouse
+autocmd BufEnter * set mouse=
+
+" don't beep
+set visualbell
+set noerrorbells
+
 " 字体字号
 "set guifont=Monaco:h20
 " use YaHei.Consolas font.

@@ -2,17 +2,16 @@ execute pathogen#infect()
 
 " 显示行号
 set number
-
+" 禁止光标闪烁
 set gcr=a:block-blinkon0
-
+" 不显示滚动条
 set guioptions-=l
 set guioptions-=L
 set guioptions-=r
 set guioptions-=R
-
+" 隐藏菜单和工具条
 set guioptions-=m
 set guioptions-=T
-
 
 " 语法高亮
 syntax enable

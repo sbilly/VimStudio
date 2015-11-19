@@ -1,5 +1,7 @@
 execute pathogen#infect() 
 
+" 字体字号
+set guifont=Monaco:h20
 " 显示行号
 set number
 " 禁止光标闪烁

@@ -1,5 +1,8 @@
 execute pathogen#infect() 
 
+set incsearch
+set wildmenu
+set nocompatible
 " 字体字号
 "set guifont=Monaco:h20
 " use YaHei.Consolas font.

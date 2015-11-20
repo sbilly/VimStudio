@@ -2,11 +2,15 @@ execute pathogen#infect()
 
 " disable mouse
 autocmd BufEnter * set mouse=
-
 " don't beep
 set visualbell
 set noerrorbells
-
+" 实时搜索
+set incsearch
+" vim命令行模式智能补全
+set wildmenu
+" 关闭兼容模式
+set nocompatible
 " 字体字号
 "set guifont=Monaco:h20
 " use YaHei.Consolas font.

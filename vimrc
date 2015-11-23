@@ -200,6 +200,8 @@ let g:syntastic_check_on_wq = 0
 
 " plugin: nerdtree 
 " ------------------------------------------------------------------------
+" 设置忽略的文件
+let NERDTreeIgnore=['\.o$', '\~$']
 " 窗口位置在右
 let g:NERDTreeWinPos="right"
 " 窗口宽度

@@ -161,6 +161,13 @@ let g:ycm_cache_omnifunc=0
 " 语法关键字补全         
 let g:ycm_seed_identifiers_with_syntax=1
 
+" plugin: ctrlsf.vim
+" ------------------------------------------------------------------------
+" 全局搜索当前光标所在的关键字
+nnoremap <Leader>sp :CtrlSF<CR>
+" 不自动关闭结果窗口
+let g:ctrlsf_auto_close = 0
+
 " plugin: MiniBufExplorer
 " ------------------------------------------------------------------------
 " 自动启动，

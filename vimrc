@@ -33,6 +33,8 @@ syntax enable
 set nowrap
 " 高亮显示搜索结果
 set hlsearch
+" 搜索时忽略大小写
+set ignorecase
 " 高亮当前行
 set cursorline 
 " 高亮显示当前列

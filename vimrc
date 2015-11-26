@@ -139,7 +139,8 @@ colorscheme solarized
 " 定制宏格式
 function! g:HeaderguardName()
 	return "__" . toupper(expand('%:t:gs/[^0-9a-zA-Z_]/_/g')) . "__"
-endfunction
+endfunction 
+nnoremap <F3> :HeaderguardAdd<CR>
 
 " plugin: YouCompleteMe
 " ------------------------------------------------------------------------

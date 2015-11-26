@@ -133,7 +133,13 @@ autocmd FileType qf wincmd J
 syntax enable
 set background=dark
 colorscheme solarized
- 
+
+" pulgin: vim-headerguard 
+" ------------------------------------------------------------------------
+" 定制宏格式
+function! g:HeaderguardName()
+	return "__" . toupper(expand('%:t:gs/[^0-9a-zA-Z_]/_/g')) . "__"
+endfunction
 
 " plugin: YouCompleteMe
 " ------------------------------------------------------------------------

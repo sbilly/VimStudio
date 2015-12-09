@@ -1,5 +1,9 @@
 execute pathogen#infect() 
 
+if $COLORTERM == 'gnome-terminal'
+	set t_Co=256
+endif
+
 " don't beep
 set visualbell
 set noerrorbells

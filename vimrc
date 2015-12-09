@@ -1,13 +1,5 @@
 execute pathogen#infect() 
 
-
-"Different cursors for different modes. highlight Cursor fg=white bg=DarkGreen highlight iCursor fg=white bg=steelblue highlight vCursor fg=white bg=steelblue set cursor=n-v-c:block-Cursor set cursor+=i:ver100-iCursor set cursor+=n-v-c:blinkon0 set cursor+=i:blinkwait10 set go-=T
-
-
-
-
-" disable mouse
-"autocmd BufEnter * set mouse=
 " don't beep
 set visualbell
 set noerrorbells

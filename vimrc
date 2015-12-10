@@ -62,7 +62,7 @@ filetype plugin on
 " 启用:Man命令查看各类man信息
 source $VIMRUNTIME/ftplugin/man.vim
 " 定义:Man命令查看各类man信息的快捷键(\man)
-nmap ;man :Man 2 <cword><CR>
+nmap <Leader>man :Man 2 <cword><CR>
 
 " 一键编译
 " ------------------------------------------------------------------------

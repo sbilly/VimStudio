@@ -83,3 +83,7 @@
 	path = bundle/vim-headerguard
 	url = https://github.com/drmikehenry/vim-headerguard.git
 	ignore = dirty
+[submodule "bundle/vim-easymotion"]
+	path = bundle/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion.git
+	ignore = dirty

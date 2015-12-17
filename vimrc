@@ -247,6 +247,11 @@ let NERDTreeAutoDeleteBuffer=1
 nnoremap <silent> <C-F10> :NERDTreeToggle<CR>
 nnoremap <silent> <F10> :NERDTree<CR>
 
+" plugin: ultisnips 
+" ------------------------------------------------------------------------
+let g:UltiSnipsSnippetDirectories=["../ultisnips_scripts"] 
+let g:UltiSnipsExpandTrigger="<leader><tab>"
+
 
 " plugin: tagbar
 " ------------------------------------------------------------------------

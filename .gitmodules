@@ -87,3 +87,7 @@
 	path = bundle/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion.git
 	ignore = dirty
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+	ignore = dirty

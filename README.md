@@ -1,7 +1,9 @@
 # .vim
 my vim config
 
-# shorcut
+# shortcut  
 
-F1
+F1: undo tree
+F2: ctag
+
 

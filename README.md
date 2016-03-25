@@ -12,3 +12,4 @@ ctrl + o: 跳回
 
 在buffer标签页上点v键: 将buffer垂直打开
 
+Vinarise: 16进制

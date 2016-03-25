@@ -91,3 +91,7 @@
 	path = bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
 	ignore = dirty
+[submodule "bundle/vinarise"]
+	path = bundle/vinarise
+	url = https://github.com/shougo/vinarise
+	ignore = dirty

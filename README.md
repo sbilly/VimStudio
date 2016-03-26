@@ -18,7 +18,7 @@ ctrl + o: 跳回
 plugin: [vinarise][1]  
 [doc][2]
 
-ctrl + h: 开启 / 关闭
+ctrl + h: 开启 / 关闭  
 r：修改当前光标下的值
 
 

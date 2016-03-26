@@ -15,7 +15,17 @@ ctrl + o: 跳回
 
 16进制模式：
 
-基于插件：Vinarise
+基于插件：[Vinarise][0]
 
 ctrl + h: 开启 / 关闭
 r：修改当前光标下的值
+
+
+
+
+
+
+
+
+
+[0]https://github.com/Shougo/vinarise.vim

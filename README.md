@@ -28,4 +28,4 @@ r：修改当前光标下的值
 
 
 
-[0]https://github.com/Shougo/vinarise.vim
+[0]:https://github.com/Shougo/vinarise.vim

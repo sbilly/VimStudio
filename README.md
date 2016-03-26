@@ -12,4 +12,10 @@ ctrl + o: 跳回
 
 在buffer标签页上点v键: 将buffer垂直打开
 
-Vinarise: 16进制
+
+16进制模式：
+
+基于插件：Vinarise
+
+ctrl + h: 开启 / 关闭
+r：修改当前光标下的值

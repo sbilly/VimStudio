@@ -348,3 +348,20 @@ let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 " automatically open and close the popup menu / preview window
 autocmd CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest,preview
+
+" plugin: vinarise  
+" ------------------------------------------------------------------------
+let $in_vinarise=0
+fun! ToggleVinarise()
+    if $in_vinarise>0
+        :set modifiable
+        call feedkeys("\Q")
+        let $in_vinarise=0
+    else
+        :Vinarise
+        let $in_vinarise=1
+    endif
+endf
+nnoremap <C-h> :call ToggleVinarise()<CR>
+
+

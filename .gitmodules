@@ -95,3 +95,7 @@
 	path = bundle/vinarise
 	url = https://github.com/shougo/vinarise
 	ignore = dirty
+[submodule "bundle/vim-instant-markdown"]
+	path = bundle/vim-instant-markdown
+	url = https://github.com/suan/vim-instant-markdown.git
+	ignore = dirty

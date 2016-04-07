@@ -21,6 +21,10 @@ plugin: [vinarise][1]
 ctrl + h: 开启 / 关闭  
 r：修改当前光标下的值
 
+# 插件目录
+
+[vim-instant-markdown][3]
+
 
 
 
@@ -31,3 +35,4 @@ r：修改当前光标下的值
 
 [1]:https://github.com/Shougo/vinarise.vim
 [2]:https://github.com/Shougo/vinarise.vim/blob/master/doc/vinarise.txt
+[3]:https://github.com/suan/vim-instant-markdown

@@ -23,7 +23,7 @@ r：修改当前光标下的值
 
 # 插件目录
 
-[vim-instant-markdown][3]
+[vim-instant-markdown][3] - 同步渲染markdown
 
 
 

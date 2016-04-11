@@ -26,7 +26,7 @@ r：修改当前光标下的值
 
 # 插件目录
 
-[vim-instant-markdown][3] - 同步渲染markdown
+[vim-instant-markdown][3] - 同步渲染markdown  
 [fcitx.vim][4] - 中英文输入法切换
 
 

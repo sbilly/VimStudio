@@ -35,8 +35,8 @@ if 'mac' == osinfo.type:
     subprocess.call(["brew", "install", 
         "fcitx-remote-for-osx", 
         "--with-input-method=baidu-pinyin"])
-    copyfile('bundle/fcitx.vim/so/fcitx.vim', 
-            './plugin/fcitx.vim')
+    copyfile('.vim/bundle/fcitx.vim/so/fcitx.vim', 
+            '.vim/plugin/fcitx.vim')
 elif 'linux' == osinfo.type: 
     if 'kali' == osinfo.name: 
         subprocess.call(["apt-get", "install", 

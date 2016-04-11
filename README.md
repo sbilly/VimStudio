@@ -25,10 +25,12 @@ r：修改当前光标下的值
 # 插件目录
 
 <a name="">[vim-instant-markdown][1-1]</a> 
-<sup>[v0.0.7][1-2]</sup> - 同步渲染markdown 
+<sup>[v0.0.7][1-2]</sup>  
+同步渲染markdown
 
 <a name="">[vinarise][2-1]</a> 
-<sup>[v1.0][2-2]</sup> - 同步渲染markdown 
+<sup>[v1.0][2-2]</sup>  
+十六进制编辑器
 
 
 [fcitx.vim][4] - 中英文输入法切换

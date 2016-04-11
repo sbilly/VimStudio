@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
-f = open('../.gitmodules')
-#for line in f:
-#    if -1 != line.find('[submodule'):
 import subprocess
+
+f = open('../.gitmodules')
 
 url = ''
 dstpath = ''

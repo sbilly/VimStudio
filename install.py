@@ -12,6 +12,8 @@ if -1 != platform.find('Darwin'):
     osinfo['type'] = 'mac'
 elif -1 != platform.find('Linux'):
     osinfo['type'] = 'linux'
+    if -1 != platform.find('kali'): 
+        osinfo['release'] = 'kali'
 elif -1 != platform.find('Windows'):
     osinfo['type'] = 'windows'
 
@@ -27,7 +29,8 @@ if 'mac' == osinfo['type']:
     copyfile('bundle/fcitx.vim/so/fcitx.vim', 
             './plugin/fcitx.vim')
 elif 'linux' == osinfo['type']: 
-    print 'linux' 
-
-
-
+    if 'kali' == osinfo['release']: 
+        subprocess.call(["apt-get", "install", 
+            "fcitx", "fcitx-sunpinyin", 
+            "fcitx-libpinyin"])
+        

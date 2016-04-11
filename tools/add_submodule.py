@@ -17,7 +17,6 @@ while 1:
     if -1 != line.find('[submodule'): 
         dstpath = line.split('submodule \"')[1].split('\"')[0]
         is_get_path = True
-        line = f.readline()
     elif -1 != line.find('url'):
         url = line.split('=')[1][:-1].strip()
         is_get_url = True

@@ -28,21 +28,19 @@ r：修改当前光标下的值
 <sup>[v0.0.7][1-2]</sup>  
 *同步渲染markdown*
 
-<a name="">[vinarise][2-1]</a> 
+<a name="">[vinarise.vim][2-1]</a>
 <sup>[v1.0][2-2]</sup>  
 *十六进制编辑器*
 
-
-[fcitx.vim][4]    
+<a name="">[fcitx.vim][3-1]</a>
+<sup>[v1.2.1][3-2]</sup>  
 *平滑切换中英文输入法*
-
 
 
 [1-1]:https://github.com/suan/vim-instant-markdown
 [1-2]:https://github.com/suan/vim-instant-markdown/releases/tag/v0.0.7
 [2-1]:https://github.com/Shougo/vinarise.vim
 [2-2]:https://github.com/Shougo/vinarise.vim/releases
-
-
-[4]:https://github.com/lilydjwg/fcitx.vim
+[3-1]:https://github.com/lilydjwg/fcitx.vim
+[3-2]:https://github.com/lilydjwg/fcitx.vim/releases/tag/1.2.1
 

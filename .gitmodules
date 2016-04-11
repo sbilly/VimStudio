@@ -23,7 +23,7 @@
 	url = https://github.com/scrooloose/nerdtree.git
 	ignore = dirty
 [submodule ".vim/bundle/snipmate.vim"]
-	path = bundle/snipmate.vim
+	path = .vim/bundle/snipmate.vim
 	url = git://github.com/msanders/snipmate.vim.git
 	ignore = dirty
 [submodule ".vim/bundle/syntastic"]

@@ -102,3 +102,7 @@
 	path = .vim/bundle/fcitx.vim
 	url = https://github.com/lilydjwg/fcitx.vim.git
 	ignore = dirty
+[submodule "vim"]
+	path = vim
+	url = https://github.com/vim/vim
+	ignore = dirty

@@ -28,7 +28,7 @@ r：修改当前光标下的值
 <sup>[v0.0.7][1-2]</sup>  
 *同步渲染markdown*
 
-<a name="">[vinarise.vim][2-1]</a>
+<a name="">[vinarise][2-1]</a>
 <sup>[v1.0][2-2]</sup>  
 *十六进制编辑器*
 

@@ -26,107 +26,82 @@ r：修改当前光标下的值
 
 # 插件目录
 
-<a name="">[vim-instant-markdown][1-1]</a> 
-<sup>[v0.0.7][1-2]</sup>  
+<a name="">[vim-instant-markdown][1-1]</a> <sup>[v0.0.7][1-2]</sup>  
 *同步渲染markdown*
 
-<a name="">[vinarise][2-1]</a>
-<sup>[v1.0][2-2]</sup>  
+<a name="">[vinarise][2-1]</a> <sup>[v1.0][2-2]</sup>  
 *十六进制编辑器*
 
-<a name="">[fcitx.vim][3-1]</a>
-<sup>[v1.2.1][3-2]</sup>  
+<a name="">[fcitx.vim][3-1]</a> <sup>[v1.2.1][3-2]</sup>  
 *平滑切换中英文输入法*
 
-<a name="">[gundo.vim][4-1]</a>
-<sup>[v2.6.1][4-2]</sup>  
+<a name="">[gundo.vim][4-1]</a> <sup>[v2.6.1][4-2]</sup>  
 *xxxxxx*
 
-<a name="">[a.vim][5-1]</a>
-<sup>[v2.18][5-2]</sup>  
+<a name="">[a.vim][5-1]</a> <sup>[v2.18][5-2]</sup>  
 *xxxxxx*
 
-<a name="">[incsearch.vim][6-1]</a>
-<sup>[v2.0.1][6-2]</sup>  
+<a name="">[incsearch.vim][6-1]</a> <sup>[v2.0.1][6-2]</sup>  
 *xxxxxx*
 
-<a name="">[nerdcommenter][7-1]</a>
-<sup>[v2.3.0][7-2]</sup>  
+<a name="">[nerdcommenter][7-1]</a> <sup>[v2.3.0][7-2]</sup>  
 *xxxxxx*
 
-<a name="">[nerdtree][8-1]</a>
-<sup>[v5.0.0][8-2]</sup>  
+<a name="">[nerdtree][8-1]</a> <sup>[v5.0.0][8-2]</sup>  
 *xxxxxx*
 
-<a name="">[snipmate.vim][9-1]</a>
-<sup>[master][9-2]</sup>  
+<a name="">[snipmate.vim][9-1]</a> <sup>[master][9-2]</sup>  
 *xxxxxx*
 
-<a name="">[syntastic][10-1]</a>
-<sup>[v3.7.0][10-2]</sup>  
+<a name="">[syntastic][10-1]</a> <sup>[v3.7.0][10-2]</sup>  
 *xxxxxx*
 
-<a name="">[vim-cmake][11-1]</a>
-<sup>[master][11-2]</sup>  
+<a name="">[vim-cmake][11-1]</a> <sup>[master][11-2]</sup>  
 *xxxxxx*
 
-<a name="">[vim-airline][12-1]</a>
-<sup>[v0.8][12-2]</sup>  
+<a name="">[vim-airline][12-1]</a> <sup>[v0.8][12-2]</sup>  
 *xxxxxx*
 
-<a name="">[tagbar][13-1]</a>
-<sup>[v2.6.1][13-2]</sup>  
+<a name="">[tagbar][13-1]</a> <sup>[v2.6.1][13-2]</sup>  
 *xxxxxx*
 
-<a name="">[vim-fugitive][14-1]</a>
-<sup>[v2.2][14-2]</sup>  
+<a name="">[vim-fugitive][14-1]</a> <sup>[v2.2][14-2]</sup>  
 *xxxxxx*
 
-<a name="">[vim-indent-guides][15-1]</a>
-<sup>[v1.6][15-2]</sup>  
+<a name="">[vim-indent-guides][15-1]</a> <sup>[v1.6][15-2]</sup>  
 *xxxxxx*
 
-<a name="">[vim-signature][16-1]</a>
-<sup>[master][16-2]</sup>  
+<a name="">[vim-signature][16-1]</a> <sup>[master][16-2]</sup>  
 *xxxxxx*
 
 <a name="">[YouCompleteMe][17-1]</a> <sup>[master][17-2]</sup> ==> [LLVM](#llvm)   
 *xxxxxx*
 
-<a name="">[minibufexpl][18-1]</a>
-<sup>[v6.5.2][18-2]</sup>  
+<a name="">[minibufexpl][18-1]</a> <sup>[v6.5.2][18-2]</sup>  
 *xxxxxx*
 
-<a name="">[vim-fswitch][19-1]</a>
-<sup>[master][19-2]</sup>  
+<a name="">[vim-fswitch][19-1]</a> <sup>[master][19-2]</sup>  
 *xxxxxx*
 
-<a name="">[vim-auto-save][20-1]</a>
-<sup>[v0.1.7][20-2]</sup>  
+<a name="">[vim-auto-save][20-1]</a> <sup>[v0.1.7][20-2]</sup>  
 *xxxxxx*
 
-<a name="">[vim-powerline][21-1]</a>
-<sup>[master][21-2]</sup>  
+<a name="">[vim-powerline][21-1]</a> <sup>[master][21-2]</sup>  
 *xxxxxx*
 
-<a name="">[vim-colors-solarized][22-1]</a>
-<sup>[master][22-2]</sup>  
+<a name="">[vim-colors-solarized][22-1]</a> <sup>[master][22-2]</sup>  
 *xxxxxx*
 
-<a name="">[ctrlsf.vim][23-1]</a>
-<sup>[v1.6.1][23-2]</sup>  
+<a name="">[ctrlsf.vim][23-1]</a> <sup>[v1.6.1][23-2]</sup>  
 *xxxxxx*
 
-<a name="">[vim-headerguard][24-1]</a>
-<sup>[v0.2.2][24-2]</sup>  
+<a name="">[vim-headerguard][24-1]</a> <sup>[v0.2.2][24-2]</sup>  
 *xxxxxx*
 
-<a name="">[vim-easymotion][25-1]</a>
-<sup>[v3.0.1][25-2]</sup>  
+<a name="">[vim-easymotion][25-1]</a> <sup>[v3.0.1][25-2]</sup>  
 *xxxxxx*
 
-<a name="">[ultisnips][26-1]</a>
-<sup>[v3.1][26-2]</sup>  
+<a name="">[ultisnips][26-1]</a> <sup>[v3.1][26-2]</sup>  
 *xxxxxx*
 
 # 依赖目录   

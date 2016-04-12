@@ -1,5 +1,5 @@
-[submodule ".vim/bundle/gundo"]
-	path = .vim/bundle/gundo
+[submodule ".vim/bundle/gundo.vim"]
+	path = .vim/bundle/gundo.vim
 	url = http://github.com/sjl/gundo.vim.git
 	ignore = dirty
 [submodule ".vim/bundle/a.vim"]

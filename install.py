@@ -71,13 +71,10 @@ while 1:
             dep_ver[name] = ver
     submodules[submodule_name] = {'self':submodule_ver, 'dep':dep_ver};
 
-
-'''
 # update all submodules 
 # -------------------------------------------
 subprocess.call(["git", "submodule", 
     "update", "--init", "--recursive"])
-'''
 
 # checkout specify version tag 
 # -------------------------------------------

@@ -90,7 +90,7 @@ r：修改当前光标下的值
 <sup>[master][16-2]</sup>  
 *xxxxxx*
 
-<a name="">[YouCompleteMe][17-1]</a><sup>[master][17-2]</sup> ==> LLVM   
+<a name="">[YouCompleteMe][17-1]</a> <sup>[master][17-2]</sup> ==> [LLVM](#dep1)   
 *xxxxxx*
 
 <a name="">[minibufexpl][18-1]</a>
@@ -130,7 +130,7 @@ r：修改当前光标下的值
 *xxxxxx*
 
 # 依赖目录   
-<a name="">[LLVM][27-1]</a> <sup>[v3.8.0][27-2]</sup>  
+<a name="dep1">[LLVM][27-1]</a> <sup>[v3.8.0][27-2]</sup>  
 *xxxxxx*
 
 

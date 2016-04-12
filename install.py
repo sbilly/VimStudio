@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import os
 import shutil
+import urllib
 import platform
 import subprocess
 from shutil import copyfile
@@ -26,15 +27,14 @@ elif -1 != platform.find('Linux'):
 elif -1 != platform.find('Windows'):
     osinfo.name = 'windows'
 
-# confirm all submodules' version 
+# confirm all submodules, dep version 
 # -------------------------------------------
 f = open('README.md')
 
 submodule_ver = ''
 submodule_name = ''
 submodules = {}
-is_get_submodule_name = False
-is_get_submodule_ver  = False
+is_have_dep = True
 
 content = f.read()
 while 1:
@@ -49,24 +49,28 @@ while 1:
     submodule_ver = content.split('[' + submodule_ver + ']:', 1)[1].split('/tag/', 1)[1].split('[', 1)[0]
     submodule_ver = submodule_ver[:-1]
 
-'''
-while 1:
-    line = f.readline()
-    if '' == line :
-        break
-    if -1 != line.find('<a name=\"\">['): 
-        submodule_name = line.split('\">[')[1].split('][')[0]
-        is_get_submodule_name = True
-    elif -1 != line.find('<sup>['):
-        submodule_ver = line.split('<sup>[')[1].split('][')[0]
-        is_get_submodule_ver = True
+    is_have_dep = True
 
-    if is_get_submodule_name and is_get_submodule_ver:
-        is_get_submodule_ver = False
-        is_get_submodule_name = False
-        submodules[submodule_name] = submodule_ver;
-f.close()
-'''
+    try:
+        dep = content.split('=>', 1)[1].split('<a name=\"', 1)[0].split('\n', 1)[0].replace(' ', '')
+    except IndexError:
+        is_have_dep = False
+
+    if is_have_dep:
+        dep = dep.split(',')
+        dep_ver = {}
+        for d in dep:
+            ver = ''
+            name = d.split('[', 1)[1].split('](', 1)[0]
+            anchor_name = d.split('(#', 1)[1].split(')', 1)[0]
+            try:
+                ver = content.split('<a name=\"' + anchor_name + '\">', 1)[1]
+            except IndexError:
+                continue
+            ver = ver.split('<sup>[', 1)[1].split('][', 1)[0]
+            dep_ver[name] = ver
+    submodules[submodule_name] = {'self':submodule_ver, 'dep':dep_ver};
+
 
 '''
 # update all submodules 
@@ -75,15 +79,13 @@ subprocess.call(["git", "submodule",
     "update", "--init", "--recursive"])
 '''
 
-
 # checkout specify version tag 
 # -------------------------------------------
 for name, ver in submodules.iteritems():
     predir = os.getcwd()
     dstdir = '.vim/bundle/' + name
     os.chdir(dstdir)
-    subprocess.call(['git', 'checkout', ver])
-    subprocess.call(['git', 'checkout', ver[1:]])
+    subprocess.call(['git', 'checkout', ver['self']])
     os.chdir(predir)
 
 # special case -> plugin: fcitx
@@ -99,6 +101,13 @@ elif 'linux' == osinfo.type:
         subprocess.call(["apt-get", "install", 
             "fcitx", "fcitx-sunpinyin", 
             "fcitx-libpinyin"])
+
+# special case -> plugin: YouCompleteMe 
+# -------------------------------------------
+if 'mac' == osinfo.type:
+    #srcurl = ''
+    #urllib.URLopener()
+    None
 
 # create .vim in user home  
 # -------------------------------------------

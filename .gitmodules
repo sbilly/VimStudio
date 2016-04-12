@@ -93,15 +93,15 @@
 [submodule ".vim/bundle/vinarise"]
 	path = .vim/bundle/vinarise
 	url = https://github.com/shougo/vinarise
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/vim-instant-markdown"]
 	path = .vim/bundle/vim-instant-markdown
 	url = https://github.com/suan/vim-instant-markdown.git
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/fcitx.vim"]
 	path = .vim/bundle/fcitx.vim
 	url = https://github.com/lilydjwg/fcitx.vim.git
-	ignore = dirty
+	ignore = all
 [submodule "vim"]
 	path = vim
 	url = https://github.com/vim/vim

@@ -15,10 +15,10 @@ while 1:
         break
     
     if -1 != line.find('[submodule'): 
-        dstpath = line.split('submodule \"')[1].split('\"')[0]
+        dstpath = line.split('submodule \"', 1)[1].split('\"', 1)[0]
         is_get_path = True
     elif -1 != line.find('url'):
-        url = line.split('=')[1][:-1].strip()
+        url = line.split('=', 1)[1][:-1].strip()
         is_get_url = True
 
     if is_get_url and is_get_path:

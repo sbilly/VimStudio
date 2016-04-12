@@ -3,4 +3,5 @@
 .netrwhist
 *.swp
 /tags
-/plugin/*.vim
+
+.vim/plugin/fcitx.vim

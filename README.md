@@ -130,7 +130,7 @@ r：修改当前光标下的值
 *xxxxxx*
 
 # 依赖目录   
-<a name="">[LLVM][27-1]</a><sup>[v3.8.0][27-2]</sup>  
+<a name="">[LLVM][27-1]</a> <sup>[v3.8.0][27-2]</sup>  
 *xxxxxx*
 
 

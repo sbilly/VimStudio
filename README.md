@@ -12,7 +12,7 @@ git clone https://github.com/xushvai/VimStudio.git
 
 ### Step 2) Just run auto script 
 ```
-sudo python install.py 
+python install.py 
 ```
 
 ## Usage    

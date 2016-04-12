@@ -10,7 +10,7 @@ Not visual studio !
 git clone https://github.com/xushvai/VimStudio.git  
 ```
 
-### Step 2) Run auto script 
+### Step 2) Just run auto script 
 ```
 sudo python install.py 
 ```

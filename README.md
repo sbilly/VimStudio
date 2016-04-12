@@ -90,8 +90,7 @@ r：修改当前光标下的值
 <sup>[master][16-2]</sup>  
 *xxxxxx*
 
-<a name="">[YouCompleteMe][17-1]</a>
-<sup>[master][17-2]</sup>  
+<a name="">[YouCompleteMe][17-1]</a><sup>[master][17-2]</sup> ==>    
 *xxxxxx*
 
 <a name="">[minibufexpl][18-1]</a>

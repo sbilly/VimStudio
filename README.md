@@ -90,7 +90,7 @@ r：修改当前光标下的值
 <sup>[master][16-2]</sup>  
 *xxxxxx*
 
-<a name="">[YouCompleteMe][17-1]</a> <sup>[master][17-2]</sup> ==> [LLVM](#dep1)   
+<a name="">[YouCompleteMe][17-1]</a> <sup>[master][17-2]</sup> ==> [LLVM](#llvm)   
 *xxxxxx*
 
 <a name="">[minibufexpl][18-1]</a>
@@ -130,10 +130,8 @@ r：修改当前光标下的值
 *xxxxxx*
 
 # 依赖目录   
-<a name="dep1">[LLVM][27-1]</a> <sup>[v3.8.0][27-2]</sup>  
+<a name="llvm">[LLVM][27-1]</a> <sup>[v3.8.0][27-2]</sup>  
 *xxxxxx*
-
-
 	
 [1-1]:https://github.com/suan/vim-instant-markdown
 [1-2]:https://github.com/suan/vim-instant-markdown/releases/tag/v0.0.7

@@ -1,5 +1,5 @@
 # VimStudio  
-my vim config
+![1](resource/logo_1.png)
 
 # shortcut  
 

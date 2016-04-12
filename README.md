@@ -36,6 +36,9 @@ r：修改当前光标下的值
 <sup>[v1.2.1][3-2]</sup>  
 *平滑切换中英文输入法*
 
+<a name="">[gundo.vim][4-1]</a>
+<sup>[v2.6.1][4-2]</sup>  
+*平滑切换中英文输入法*
 
 [1-1]:https://github.com/suan/vim-instant-markdown
 [1-2]:https://github.com/suan/vim-instant-markdown/releases/tag/v0.0.7
@@ -43,4 +46,8 @@ r：修改当前光标下的值
 [2-2]:https://github.com/Shougo/vinarise.vim/releases
 [3-1]:https://github.com/lilydjwg/fcitx.vim
 [3-2]:https://github.com/lilydjwg/fcitx.vim/releases/tag/1.2.1
+[4-1]:http://github.com/sjl/gundo.vim.git
+[4-2]:https://github.com/sjl/gundo.vim/releases/tag/v2.6.1
+
+
 

@@ -90,7 +90,7 @@ r：修改当前光标下的值
 <sup>[master][16-2]</sup>  
 *xxxxxx*
 
-<a name="">[YouCompleteMe][17-1]</a><sup>[master][17-2]</sup>    
+<a name="">[YouCompleteMe][17-1]</a><sup>[master][17-2]</sup> ==> LLVM   
 *xxxxxx*
 
 <a name="">[minibufexpl][18-1]</a>
@@ -129,8 +129,9 @@ r：修改当前光标下的值
 <sup>[v3.1][26-2]</sup>  
 *xxxxxx*
 
-# 依赖目录  
-
+# 依赖目录   
+<a name="">[LLVM][27-1]</a><sup>[v3.8.0][27-2]</sup>  
+*xxxxxx*
 
 
 	
@@ -186,5 +187,7 @@ r：修改当前光标下的值
 [25-2]:https://github.com/easymotion/vim-easymotion/releases/tag/v3.0.1
 [26-1]:https://github.com/SirVer/ultisnips.git
 [26-2]:https://github.com/SirVer/ultisnips/releases/tag/3.1
+[27-1]:https://github.com/llvm-mirror/llvm
+[27-2]:http://llvm.org/releases/download.html
 
 

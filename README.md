@@ -3,7 +3,19 @@ Not visual studio !
 
 ![1](resource/logo_1.png)
 
-# shortcut  
+## Quick Start  
+
+### Step 1) Clone repository  
+```
+git clone https://github.com/xushvai/VimStudio.git  
+```
+
+### Step 2) Just run auto script 
+```
+sudo python install.py 
+```
+
+## Usage    
 
 F1: 打开undo tree  
 F2: 生成tag  
@@ -24,7 +36,7 @@ gx : 打开超链接
 ctrl + h: 开启 / 关闭  
 r：修改当前光标下的值
 
-# 插件目录
+## 插件  
 
 <a name="">[vim-instant-markdown][1-1]</a> <sup>[v0.0.7][1-2]</sup>  
 *同步渲染markdown*
@@ -75,7 +87,7 @@ r：修改当前光标下的值
 *xxxxxx*
 
 <a name="">[YouCompleteMe][17-1]</a> <sup>[master][17-2]</sup> ==> [LLVM](#llvm)   
-*xxxxxx*
+*基于语意的代码自动补全，依赖于LLVM*  
 
 <a name="">[minibufexpl][18-1]</a> <sup>[v6.5.2][18-2]</sup>  
 *xxxxxx*
@@ -104,9 +116,13 @@ r：修改当前光标下的值
 <a name="">[ultisnips][26-1]</a> <sup>[v3.1][26-2]</sup>  
 *xxxxxx*
 
-# 依赖目录   
+# 依赖     
 <a name="llvm">[LLVM][27-1]</a> <sup>[v3.8.0][27-2]</sup>  
 *xxxxxx*
+
+## Questions?  
+
+[Open an Issue](https://github.com/xushvai/VimStudio/issues/new) and let's chat! 
 	
 [1-1]:https://github.com/suan/vim-instant-markdown
 [1-2]:https://github.com/suan/vim-instant-markdown/releases/tag/v0.0.7

@@ -119,6 +119,10 @@ r：修改当前光标下的值
 # 依赖     
 <a name="llvm">[LLVM][27-1]</a> <sup>[v3.8.0][27-2]</sup>  
 *xxxxxx*
+
+## Questions?  
+
+[Open an Issue](https://github.com/xushvai/VimStudio/issues/new) and let's chat! 
 	
 [1-1]:https://github.com/suan/vim-instant-markdown
 [1-2]:https://github.com/suan/vim-instant-markdown/releases/tag/v0.0.7

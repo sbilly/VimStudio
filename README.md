@@ -35,7 +35,7 @@ r：修改当前光标下的值
 <a name="">[fcitx.vim][3-1]</a> <sup>[v1.2.1][3-2]</sup>  
 *平滑切换中英文输入法*
 
-<a name="">[gundo][4-1]</a> <sup>[v2.6.1][4-2]</sup>  
+<a name="">[gundo.vim][4-1]</a> <sup>[v2.6.1][4-2]</sup>  
 *xxxxxx*
 
 <a name="">[a.vim][5-1]</a> <sup>[v2.18][5-2]</sup>  

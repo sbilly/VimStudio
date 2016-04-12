@@ -44,7 +44,9 @@ r：修改当前光标下的值
 <sup>[v2.18][5-2]</sup>  
 *xxxxxx*
 
-
+<a name="">[incsearch.vim][6-1]</a>
+<sup>[v2.0.1][6-2]</sup>  
+*xxxxxx*
 
 
 
@@ -53,10 +55,7 @@ r：修改当前光标下的值
 	path = .vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
 	ignore = dirty
-[submodule ".vim/bundle/incsearch.vim"]
-	path = .vim/bundle/incsearch.vim
-	url = https://github.com/haya14busa/incsearch.vim
-	ignore = dirty
+
 [submodule ".vim/bundle/nerdcommenter"]
 	path = .vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
@@ -148,6 +147,8 @@ r：修改当前光标下的值
 [4-2]:https://github.com/sjl/gundo.vim/releases/tag/v2.6.1
 [5-1]:https://github.com/vim-scripts/a.vim
 [5-2]:https://github.com/vim-scripts/a.vim/releases/tag/2.18
+[6-1]:https://github.com/haya14busa/incsearch.vim
+[6-2]:https://github.com/haya14busa/incsearch.vim/releases/tag/v2.0.1
 
 
 

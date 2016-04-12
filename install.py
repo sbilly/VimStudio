@@ -45,9 +45,14 @@ while 1:
     if  '' == content:
         break
     submodule_name = content.split('][', 1)[0]
-    submodule_ver = content.split('<sup>[', 1)[1].split('][', 1)[1].split(']</sup>', 1)[0]
-    submodule_ver = content.split('[' + submodule_ver + ']:', 1)[1].split('/tag/', 1)[1].split('[', 1)[0]
-    submodule_ver = submodule_ver[:-1]
+
+    submodule_ver = content.split('<sup>[', 1)[1].split('][', 1)[0]
+    if 'master' != submodule_ver:
+        submodule_ver = content.split('<sup>[', 1)[1].split('][', 1)[1].split(']</sup>', 1)[0]
+        submodule_ver = content.split('[' + submodule_ver + ']:', 1)[1].split('/tag/', 1)[1].split('[', 1)[0]
+        submodule_ver = submodule_ver[:-1]
+
+    print submodule_name + ' ' + submodule_ver
 
     is_have_dep = True
 
@@ -139,3 +144,4 @@ try:
     shutil.copytree(src, dst)
 except OSError:
     None
+

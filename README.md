@@ -87,7 +87,7 @@ r：修改当前光标下的值
 *xxxxxx*
 
 <a name="">[YouCompleteMe][17-1]</a> <sup>[master][17-2]</sup> ==> [LLVM](#llvm)   
-*xxxxxx*
+*基于语意的代码自动补全，依赖于LLVM*  
 
 <a name="">[minibufexpl][18-1]</a> <sup>[v6.5.2][18-2]</sup>  
 *xxxxxx*

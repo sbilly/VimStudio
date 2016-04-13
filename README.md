@@ -37,7 +37,7 @@ ctrl + h: 开启 / 关闭
 r：修改当前光标下的值
 
 ## Vim版本 
-<a name="">[vim-instant-markdown][0-1]</a> <sup>[v7.4.1725][0-2]</sup>  
+<a name="">[vim][0-1]</a> <sup>[v7.4.1725][0-2]</sup>  
 
 ## 插件  
 

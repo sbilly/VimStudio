@@ -106,3 +106,6 @@
 	path = .vim/bundle/gundo.vim
 	url = https://github.com/sjl/gundo.vim
 	ignore = all
+[submodule "vimgdb-for-vim7.4"]
+	path = vimgdb-for-vim7.4
+	url = https://github.com/larrupingpig/vimgdb-for-vim7.4

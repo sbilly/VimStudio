@@ -1,34 +1,40 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import os
+import sys
 import shutil
 import urllib
 import platform
 import subprocess
 from shutil import copyfile
 
-class OSInfo:
+class EnvInfo:
     def __init__(self, type, name):
-        self.type = type 
-        self.name = name 
-    type = 'unknow'
-    name = 'unknow'
+        self.os_type = type 
+        self.os_name = name 
+    os_type = 'unknow'
+    os_name = 'unknow'
+    python_ver = 'unknow'
 
-# confirm os info
-# -------------------------------------------
-osinfo = OSInfo('unknow', 'unknow')
+# confirm env info
+# ---------------------------------------------------
+envinfo = EnvInfo('unknow', 'unknow')
 platform = platform.platform()
 if -1 != platform.find('Darwin'):
-    osinfo.type = 'mac'
+    envinfo.os_type = 'mac'
 elif -1 != platform.find('Linux'):
-    osinfo.type = 'linux'
+    envinfo.os_type = 'linux'
     if -1 != platform.find('Kali'): 
-        osinfo.name = 'kali'
+        envinfo.os_name = 'kali'
 elif -1 != platform.find('Windows'):
-    osinfo.name = 'windows'
+    envinfo.os_name = 'windows'
 
-# confirm all submodules, dep version 
-# -------------------------------------------
+python_ver = sys.version.split('.')
+python_ver = python_ver[0] + '.' + python_ver[1]
+envinfo.python_ver = python_ver
+
+# get vim, plugins, dependencies ver from README.md 
+# ---------------------------------------------------
 f = open('README.md')
 
 submodule_ver = ''
@@ -75,51 +81,82 @@ while 1:
             ver = ver.split('<sup>[', 1)[1].split('][', 1)[0]
             dep_ver[name] = ver
     submodules[submodule_name] = {'self':submodule_ver, 'dep':dep_ver};
-
+'''
 # update all submodules 
-# -------------------------------------------
+# ---------------------------------------------------
 subprocess.call(["git", "submodule", 
     "update", "--init", "--recursive"])
 
-# checkout specify version tag 
-# -------------------------------------------
+# checkout specify tag version
+# ---------------------------------------------------
 for name, ver in submodules.iteritems():
     predir = os.getcwd()
-    dstdir = '.vim/bundle/' + name
+    if 'vim' == name:
+        dstdir = name
+    else:
+        dstdir = '.vim/bundle/' + name
     os.chdir(dstdir)
     subprocess.call(['git', 'checkout', ver['self']])
     os.chdir(predir)
 
-# special case -> plugin: fcitx
-# -------------------------------------------
-if 'mac' == osinfo.type:
+'''
+
+'''
+# for plugin: fcitx
+# ---------------------------------------------------
+if 'mac' == envinfo.os_type:
     subprocess.call(["brew", "install", 
         "fcitx-remote-for-osx", 
         "--with-input-method=baidu-pinyin"])
     copyfile('.vim/bundle/fcitx.vim/so/fcitx.vim', 
             '.vim/plugin/fcitx.vim')
-elif 'linux' == osinfo.type: 
-    if 'kali' == osinfo.name: 
+elif 'linux' == envinfo.os_type: 
+    if 'kali' == envinfo.os_name: 
         subprocess.call(["apt-get", "install", 
             "fcitx", "fcitx-sunpinyin", 
             "fcitx-libpinyin"])
 
-# special case -> plugin: YouCompleteMe 
-# -------------------------------------------
-if 'mac' == osinfo.type:
-    #srcurl = ''
-    #urllib.URLopener()
-    None
+# for plugin: YouCompleteMe 
+# ---------------------------------------------------
+if 'mac' == envinfo.os_type:
+    # dep: clang+llvm
+    ver = submodules['YouCompleteMe']['dep']['LLVM'].replace('v','')
+    url = 'http://llvm.org/releases/' + ver + '/'
+    filename = 'clang+llvm-' + ver + '-x86_64-apple-darwin.tar.xz' 
+    url += filename
+    decompressdir = 'clang+llvm'
+    if os.path.isfile(filename):
+        subprocess.call(['rm', '-f', filename]
+    subprocess.call(['wget', url])
+    subprocess.call(['mkdir', decompressdir])
+
+    subprocess.call(['tar', 'xfv', filename, 
+        '-C', './' + decompressdir, '--strip-components=1'])
+    subprocess.call(['rm', '-f', filename])
+
+    subprocess.call(['mkdir', 'ycm_build'])
+    predir = os.getcwd()
+    dstdir = './ycm_build' 
+    os.chdir(dstdir)
+    
+    # TODO: get vim use python version.
+    python = '/usr/bin/python2.7' 
+    subprocess.call(['cmake', '-G', 'Unix Makefiles', 
+        '-DPATH_TO_LLVM_ROOT=../' + decompressdir, 
+        '-DPYTHON_EXECUTABLE=' + python, '.', 
+        '../.vim/bundle/YouCompleteMe/third_party/ycmd/cpp'])
+    subprocess.call(['make']) 
+    os.chdir(predir)
 
 # create .vim in user home  
-# -------------------------------------------
+# ---------------------------------------------------
 home = os.path.expanduser('~')
 newpath = home + '/.vim'
 if not os.path.exists(newpath):
     os.makedirs(newpath)
 
 # copy ...  
-# -------------------------------------------
+# ---------------------------------------------------
 src = '.vim/bundle/'
 dst = home + '/.vim/bundle/'
 try:
@@ -144,4 +181,47 @@ try:
     shutil.copytree(src, dst)
 except OSError:
     None
+'''
 
+# compile install vim 
+# ---------------------------------------------------
+# chage default config file search path
+filepath = './vim/src/feature.h' 
+insert_content = '#define USR_VIMRC_FILE \"~/.vimstudio/.vimrc\"'
+insert_line = 896
+f = open(filepath, 'r')
+content = f.readlines()
+f.close()
+tmp = "".join(content)
+if -1 == tmp.find(insert_content):
+    content.insert(insert_line, insert_content)
+    f = open(filepath, 'w')
+    content = "".join(content)
+    f.write(content)
+    f.close()
+
+# TODO
+# about vimgdb
+
+# config, make, make install
+predir = os.getcwd()
+dstdir = 'vim'
+os.chdir(dstdir)
+command = ['./configure', 
+    '--with-vim-name=vimstudio',
+    '--with-features=huge', 
+    '--enable-pythoninterp',
+    '--enable-rubyinterp',
+    '--enable-luainterp',
+    '--enable-perlinterp',
+    '--enable-cscope',
+    '--with-python-config-dir=/usr/lib/python' 
+        + envinfo.python_ver + '/config/',
+    ]
+if 'linux' == envinfo.os_type:
+    command.append('--enable-gui=gtk2')
+subprocess.call(command)
+subprocess.call(['make', 'clean']) 
+subprocess.call(['make']) 
+subprocess.call(['make', 'install']) 
+os.chdir(predir)

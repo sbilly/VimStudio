@@ -36,6 +36,9 @@ gx : 打开超链接
 ctrl + h: 开启 / 关闭  
 r：修改当前光标下的值
 
+## Vim版本 
+<a name="">[vim][0-1]</a> <sup>[v7.4.1725][0-2]</sup>  
+
 ## 插件  
 
 <a name="">[vim-instant-markdown][1-1]</a> <sup>[v0.0.7][1-2]</sup>  
@@ -116,14 +119,16 @@ r：修改当前光标下的值
 <a name="">[ultisnips][26-1]</a> <sup>[v3.1][26-2]</sup>  
 *xxxxxx*
 
-# 依赖     
+## 依赖     
 <a name="llvm">[LLVM][27-1]</a> <sup>[v3.8.0][27-2]</sup>  
 *xxxxxx*
 
 ## Questions?  
 
 [Open an Issue](https://github.com/xushvai/VimStudio/issues/new) and let's chat! 
-	
+
+[0-1]:https://github.com/vim/vim
+[0-2]:https://github.com/vim/vim/releases/tag/v7.4.1725
 [1-1]:https://github.com/suan/vim-instant-markdown
 [1-2]:https://github.com/suan/vim-instant-markdown/releases/tag/v0.0.7
 [2-1]:https://github.com/Shougo/vinarise.vim

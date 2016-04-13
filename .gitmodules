@@ -1,91 +1,91 @@
 [submodule ".vim/bundle/a.vim"]
 	path = .vim/bundle/a.vim
 	url = https://github.com/vim-scripts/a.vim
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/YouCompleteMe"]
 	path = .vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/incsearch.vim"]
 	path = .vim/bundle/incsearch.vim
 	url = https://github.com/haya14busa/incsearch.vim
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/nerdcommenter"]
 	path = .vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/snipmate.vim"]
 	path = .vim/bundle/snipmate.vim
 	url = git://github.com/msanders/snipmate.vim.git
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/tagbar"]
 	path = .vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/vim-airline"]
 	path = .vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/vim-cmake"]
 	path = .vim/bundle/vim-cmake
 	url = git://github.com/vhdirk/vim-cmake.git
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/vim-fugitive"]
 	path = .vim/bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/vim-indent-guides"]
 	path = .vim/bundle/vim-indent-guides
 	url = git://github.com/nathanaelkane/vim-indent-guides.git
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/vim-signature"]
 	path = .vim/bundle/vim-signature
 	url = https://github.com/kshenoy/vim-signature
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/minibufexpl"]
 	path = .vim/bundle/minibufexpl
 	url = https://github.com/fholgado/minibufexpl.vim
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/vim-fswitch"]
 	path = .vim/bundle/vim-fswitch
 	url = https://github.com/derekwyatt/vim-fswitch.git
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/vim-auto-save"]
 	path = .vim/bundle/vim-auto-save
 	url = https://github.com/vim-scripts/vim-auto-save.git
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/vim-powerline"]
 	path = .vim/bundle/vim-powerline
 	url = https://github.com/Lokaltog/vim-powerline.git
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/vim-colors-solarized"]
 	path = .vim/bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/ctrlsf.vim"]
 	path = .vim/bundle/ctrlsf.vim
 	url = https://github.com/dyng/ctrlsf.vim.git
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/vim-headerguard"]
 	path = .vim/bundle/vim-headerguard
 	url = https://github.com/drmikehenry/vim-headerguard.git
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/vim-easymotion"]
 	path = .vim/bundle/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion.git
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/ultisnips"]
 	path = .vim/bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
-	ignore = dirty
+	ignore = all 
 [submodule ".vim/bundle/vinarise"]
 	path = .vim/bundle/vinarise
 	url = https://github.com/shougo/vinarise
@@ -101,8 +101,8 @@
 [submodule "vim"]
 	path = vim
 	url = https://github.com/vim/vim
-	ignore = dirty
+	ignore = all
 [submodule ".vim/bundle/gundo.vim"]
 	path = .vim/bundle/gundo.vim
 	url = https://github.com/sjl/gundo.vim
-	ignore = dirty
+	ignore = all

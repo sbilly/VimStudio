@@ -109,3 +109,7 @@
 [submodule "vimgdb-for-vim7.4"]
 	path = vimgdb-for-vim7.4
 	url = https://github.com/larrupingpig/vimgdb-for-vim7.4
+    ignore = all
+[submodule ".vim/bundle/vim-lldb"]
+	path = .vim/bundle/vim-lldb
+	url = https://github.com/gilligan/vim-lldb

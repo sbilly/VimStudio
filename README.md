@@ -119,6 +119,9 @@ r：修改当前光标下的值
 <a name="">[ultisnips][26-1]</a> <sup>[v3.1][26-2]</sup>  
 *xxxxxx*
 
+<a name="">[vimgdb-for-vim7.4][28-1]</a> <sup>[master][28-2]</sup>  
+*xxxxxx*
+
 ## 依赖     
 <a name="llvm">[LLVM][27-1]</a> <sup>[v3.8.0][27-2]</sup>  
 *xxxxxx*
@@ -183,5 +186,7 @@ r：修改当前光标下的值
 [26-2]:https://github.com/SirVer/ultisnips/releases/tag/3.1
 [27-1]:https://github.com/llvm-mirror/llvm
 [27-2]:http://llvm.org/releases/download.html
+[28-1]:https://sourceforge.net/projects/clewn/files/vimGdb/
+[28-2]:https://github.com/larrupingpig/vimgdb-for-vim7.4
 
 

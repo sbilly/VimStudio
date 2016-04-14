@@ -79,7 +79,7 @@ while 1:
             ver = ver.split('<sup>[', 1)[1].split('][', 1)[0]
             dep_ver[name] = ver
     submodules[submodule_name] = {'self':submodule_ver, 'dep':dep_ver};
-'''
+
 # update all submodules 
 # ---------------------------------------------------
 subprocess.call(["git", "submodule", 
@@ -175,8 +175,6 @@ subprocess.call(['cp', src, dst])
 src = '.vim'
 dst = newpath
 subprocess.call(['cp', '-r', src, dst]) 
-
-'''
 
 # compile install vim 
 # ---------------------------------------------------

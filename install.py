@@ -101,7 +101,7 @@ for name, ver in submodules.iteritems():
 # ---------------------------------------------------
 if 'linux' == envinfo.os_type:
     # use vimgdb
-    process.call(['cp', '-r', '.vim/bundle/vimgdb-for-vim7.4', './'])
+    sudprocess.call(['cp', '-r', '.vim/bundle/vimgdb-for-vim7.4', './'])
     patch_path = 'vimgdb-for-vim7.4/vim74.patch'
     f = open(patch_path, 'r')
     content = f.read()
@@ -111,12 +111,12 @@ if 'linux' == envinfo.os_type:
     f = open(patch_path, 'w')
     f.write(content)
     f.close()
-    process.call(['patch', '-p0', '<', patch_path])
+    subprocess.call(['patch', '-p0', '<', patch_path])
 
     # TODO : Copy vimgdb_runtime to .vim
 
 
-    process.call(['rm', '-rf', './vimgdb-for-vim7.4'])
+    subprocess.call(['rm', '-rf', './vimgdb-for-vim7.4'])
 elif 'mac' == envinfo.os_type:
     # use vim-lldb
     None

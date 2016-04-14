@@ -241,8 +241,10 @@ command = ['./configure',
         + envinfo.python_ver + '/config/',
     ]
 if 'mac' == envinfo.os_type:
-	# command.append('--enable-gui=athena')
-	# command.append('--disable-darwin')
+    # command.append('--enable-gui=athena')
+    # command.append('--disable-darwin')
+    None
+
 if 'linux' == envinfo.os_type:
     command.append('--enable-gui=gtk2')
     command.append('--enable-gdb')

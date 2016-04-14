@@ -111,10 +111,9 @@ if 'linux' == envinfo.os_type:
     f = open(patch_path, 'w')
     f.write(content)
     f.close()
-    subprocess.call(['patch', '-p0', '<', patch_path])
+    os.system('patch -p0 < ' + patch_path)
 
     # TODO : Copy vimgdb_runtime to .vim
-
 
     subprocess.call(['rm', '-rf', './vimgdb-for-vim7.4'])
 elif 'mac' == envinfo.os_type:

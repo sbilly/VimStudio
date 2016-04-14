@@ -101,7 +101,7 @@ for name, ver in submodules.iteritems():
 # ---------------------------------------------------
 if 'linux' == envinfo.os_type:
     # use vimgdb
-    sudprocess.call(['cp', '-r', '.vim/bundle/vimgdb-for-vim7.4', './'])
+    subprocess.call(['cp', '-r', '.vim/bundle/vimgdb-for-vim7.4', './'])
     patch_path = 'vimgdb-for-vim7.4/vim74.patch'
     f = open(patch_path, 'r')
     content = f.read()

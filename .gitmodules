@@ -112,3 +112,6 @@
 [submodule ".vim/bundle/vim-colorschemes"]
 	path = .vim/bundle/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes
+[submodule ".vim/bundle/vimgdb-for-vim7.4"]
+	path = .vim/bundle/vimgdb-for-vim7.4
+	url = https://github.com/larrupingpig/vimgdb-for-vim7.4

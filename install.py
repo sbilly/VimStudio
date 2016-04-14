@@ -145,7 +145,7 @@ if 'mac' == envinfo.os_type:
     url += filename
     decompressdir = 'clang+llvm'
     if os.path.isfile(filename):
-        subprocess.call(['rm', '-f', filenamea])
+        subprocess.call(['rm', '-f', filename])
 
     subprocess.call(['wget', url])
     subprocess.call(['mkdir', decompressdir])
@@ -170,18 +170,33 @@ if 'mac' == envinfo.os_type:
 # create .vimstudio in user home  
 # ---------------------------------------------------
 home = os.path.expanduser('~')
-newpath = home + '/.vimstudio'
+newpath = home + '/.vimstudio/.vim/bundle'
 if not os.path.exists(newpath):
-    subprocess.call(['mkdir', newpath]) 
+    subprocess.call(['mkdir', '-p', newpath]) 
 
 # copy ...  
 # ---------------------------------------------------
+dst = home + '/.vimstudio/'
 src = './.vimrc'
-dst = newpath
-subprocess.call(['cp', src, dst]) 
-src = '.vim'
-dst = newpath
-subprocess.call(['cp', '-r', src, dst]) 
+subprocess.call(['cp', src, dst])
+dst = home + '/.vimstudio/.vim/'
+src = './.vim/autoload'
+subprocess.call(['cp', '-r', src, dst])
+src = './.vim/ftplugin'
+subprocess.call(['cp', '-r', src, dst])
+src = './.vim/plugin'
+subprocess.call(['cp', '-r', src, dst])
+src = './.vim/vimrc'
+subprocess.call(['cp', src, dst])
+for name, ver in submodules.iteritems():
+    if 'vim' == name:
+        continue
+    if 'linux' == envinfo.os_type:
+        if 'vim-lldb' == name:
+            continue
+    src = './.vim/bundle/' + name
+    dst = home + '/.vimstudio/.vim/bundle/'
+    subprocess.call(['cp', '-r', src, dst])
 
 # compile install vim 
 # ---------------------------------------------------

@@ -125,6 +125,9 @@ r：修改当前光标下的值
 <a name="">[vim-lldb][29-1]</a> <sup>[master][29-2]</sup>  
 *xxxxxx*
 
+<a name="">[vim-colorschemes][30-1]</a> <sup>[master][30-2]</sup>  
+*主题*  
+
 ## 依赖     
 <a name="llvm">[LLVM][27-1]</a> <sup>[v3.8.0][27-2]</sup>  
 *xxxxxx*
@@ -193,5 +196,7 @@ r：修改当前光标下的值
 [28-2]:https://github.com/larrupingpig/vimgdb-for-vim7.4
 [29-1]:https://github.com/gilligan/vim-lldb
 [29-2]:https://github.com/gilligan/vim-lldb
+[30-1]:https://github.com/flazz/vim-colorschemes
+[30-2]:https://github.com/flazz/vim-colorschemes
 
 

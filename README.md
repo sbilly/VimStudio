@@ -1,7 +1,7 @@
 # VimStudio  
 Not visual studio !  
 
-![1](resource/logo_1.png)
+![1000](resource/logo_1.png)
 
 ## Quick Start  
 
@@ -36,7 +36,7 @@ gx : 打开超链接
 ctrl + h: 开启 / 关闭  
 r：修改当前光标下的值
 
-## Vim版本 
+## Vim版本
 <a name="">[vim][0-1]</a> <sup>[v7.4.1725][0-2]</sup>  
 
 ## 插件  

@@ -113,3 +113,6 @@
 [submodule ".vim/bundle/vim-lldb"]
 	path = .vim/bundle/vim-lldb
 	url = https://github.com/gilligan/vim-lldb
+[submodule ".vim/bundle/vim-colorschemes"]
+	path = .vim/bundle/vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes

@@ -51,86 +51,85 @@ r：修改当前光标下的值
 *平滑切换中英文输入法*
 
 <a name="">[gundo.vim][4-1]</a> <sup>[v2.6.1][4-2]</sup>  
-*xxxxxx*
+*可视化 undo 操作*
 
 <a name="">[a.vim][5-1]</a> <sup>[v2.18][5-2]</sup>  
-*xxxxxx*
+*快速切换source和header文件*
 
 <a name="">[incsearch.vim][6-1]</a> <sup>[v2.0.1][6-2]</sup>  
-*xxxxxx*
+*增强缺省incsearch*
 
 <a name="">[nerdcommenter][7-1]</a> <sup>[v2.3.0][7-2]</sup>  
-*xxxxxx*
+*快速添加/删除注释*
 
 <a name="">[nerdtree][8-1]</a> <sup>[v5.0.0][8-2]</sup>  
-*xxxxxx*
+*文件列表*
 
 <a name="">[snipmate.vim][9-1]</a> <sup>[master][9-2]</sup>  
-*xxxxxx*
+*快速插入代码片段*
 
 <a name="">[syntastic][10-1]</a> <sup>[v3.7.0][10-2]</sup>  
-*xxxxxx*
+*代码静态分析*
 
 <a name="">[vim-cmake][11-1]</a> <sup>[master][11-2]</sup>  
-*xxxxxx*
+*cmake for vim*
 
 <a name="">[vim-airline][12-1]</a> <sup>[v0.8][12-2]</sup>  
-*xxxxxx*
+*状态栏显示增强*
 
 <a name="">[tagbar][13-1]</a> <sup>[v2.6.1][13-2]</sup>  
-*xxxxxx*
+*tag符号列表*
 
 <a name="">[vim-fugitive][14-1]</a> <sup>[v2.2][14-2]</sup>  
-*xxxxxx*
+*在vim中使用git*
 
 <a name="">[vim-indent-guides][15-1]</a> <sup>[v1.6][15-2]</sup>  
-*xxxxxx*
+*缩进可视化*
 
 <a name="">[vim-signature][16-1]</a> <sup>[master][16-2]</sup>  
-*xxxxxx*
+*书签可视化*
 
 <a name="">[YouCompleteMe][17-1]</a> <sup>[master][17-2]</sup> ==> [LLVM](#llvm)   
 *基于语意的代码自动补全，依赖于LLVM*  
 
 <a name="">[minibufexpl][18-1]</a> <sup>[v6.5.2][18-2]</sup>  
-*xxxxxx*
+*多文档编辑*
 
 <a name="">[vim-fswitch][19-1]</a> <sup>[master][19-2]</sup>  
-*xxxxxx*
+*快速切换接口与实现文件*
 
 <a name="">[vim-auto-save][20-1]</a> <sup>[v0.1.7][20-2]</sup>  
-*xxxxxx*
+*自动存储改变*
 
 <a name="">[vim-powerline][21-1]</a> <sup>[master][21-2]</sup>  
-*xxxxxx*
+*美化状态栏*
 
 <a name="">[vim-colors-solarized][22-1]</a> <sup>[master][22-2]</sup>  
-*xxxxxx*
+*solarized主题风格*
 
 <a name="">[ctrlsf.vim][23-1]</a> <sup>[v1.6.1][23-2]</sup>  
-*xxxxxx*
+*内容查找*
 
 <a name="">[vim-headerguard][24-1]</a> <sup>[v0.2.2][24-2]</sup>  
-*xxxxxx*
+*快速添加C/C++头文件保护宏*
 
 <a name="">[vim-easymotion][25-1]</a> <sup>[v3.0.1][25-2]</sup>  
-*xxxxxx*
+*快速移动光标*
 
 <a name="">[ultisnips][26-1]</a> <sup>[v3.1][26-2]</sup>  
-*xxxxxx*
+*基于模板的代码补全*
 
 <a name="">[vimgdb-for-vim7.4][28-1]</a> <sup>[master][28-2]</sup>  
-*xxxxxx*
+*gdb in vim*
 
 <a name="">[vim-lldb][29-1]</a> <sup>[master][29-2]</sup>  
-*xxxxxx*
+*lldb in vim*
 
 <a name="">[vim-colorschemes][30-1]</a> <sup>[master][30-2]</sup>  
 *主题*  
 
 ## 依赖     
 <a name="llvm">[LLVM][27-1]</a> <sup>[v3.8.0][27-2]</sup>  
-*xxxxxx*
 
 ## Questions?  
 

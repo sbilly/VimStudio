@@ -91,6 +91,11 @@ for name, ver in submodules.iteritems():
     predir = os.getcwd()
     if 'vim' == name:
         dstdir = name
+        os.chdir(dstdir)
+        subprocess.call(['git', 'checkout', '.'])
+        subprocess.call(['git', 'checkout', 'master'])
+        subprocess.call(['git', 'clean', '-fd'])
+        os.chdir(predir)
     else:
         dstdir = '.vim/bundle/' + name
     os.chdir(dstdir)

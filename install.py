@@ -104,6 +104,7 @@ for name, ver in submodules.iteritems():
 
 # for plugin: vimgdb or vim-lldb  
 # ---------------------------------------------------
+home = os.path.expanduser('~')
 if 'linux' == envinfo.os_type:
     # use vimgdb
     subprocess.call(['cp', '-r', '.vim/bundle/vimgdb-for-vim7.4', './'])
@@ -117,10 +118,17 @@ if 'linux' == envinfo.os_type:
     f.write(content)
     f.close()
     os.system('patch -p0 < ' + patch_path)
-
-    # TODO : Copy vimgdb_runtime to .vim
-
     subprocess.call(['rm', '-rf', './vimgdb-for-vim7.4'])
+    # Copy vimgdb_runtime to .vim
+    srcpath = '.vim/bundle/vimgdb-for-vim7.4/'
+    dstpath = home + '/.vimstudio/.vim/'
+    os.system('cp -r ' + srcpath 
+        + 'vimgdb_runtime/doc/* ' + dstpath + 'doc')
+    os.system('cp -r ' + srcpath 
+        + 'vimgdb_runtime/macros ' + dstpath)
+    os.system('cp -r ' + srcpath 
+        + 'vimgdb_runtime/syntax ' + dstpath)
+
 elif 'mac' == envinfo.os_type:
     # use vim-lldb
     None
@@ -173,7 +181,6 @@ if 'mac' == envinfo.os_type:
 
 # create .vimstudio in user home  
 # ---------------------------------------------------
-home = os.path.expanduser('~')
 newpath = home + '/.vimstudio/.vim/bundle'
 if not os.path.exists(newpath):
     subprocess.call(['mkdir', '-p', newpath]) 
@@ -192,6 +199,9 @@ src = './.vim/plugin'
 subprocess.call(['cp', '-r', src, dst])
 src = './.vim/vimrc'
 subprocess.call(['cp', src, dst])
+dst = home + '/.vimstudio/.vim/'
+src = './.vim/doc'
+subprocess.call(['cp', '-r', src, dst])
 for name, ver in submodules.iteritems():
     if 'vim' == name:
         continue

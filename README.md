@@ -15,6 +15,11 @@ git clone https://github.com/xushvai/VimStudio.git
 python install.py 
 ```
 
+### Step 3) Run !
+```
+/opt/bin/vimstudio  
+```
+
 ## Usage    
 
 F1: 打开undo tree  

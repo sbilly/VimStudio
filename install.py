@@ -91,15 +91,14 @@ for name, ver in submodules.iteritems():
     predir = os.getcwd()
     if 'vim' == name:
         dstdir = name
-        os.chdir(dstdir)
-        subprocess.call(['git', 'checkout', '.'])
-        subprocess.call(['git', 'checkout', 'master'])
-        subprocess.call(['git', 'clean', '-fd'])
-        os.chdir(predir)
     else:
         dstdir = '.vim/bundle/' + name
+    v = ver['self']
     os.chdir(dstdir)
-    subprocess.call(['git', 'checkout', ver['self']])
+    subprocess.call(['git', 'checkout', '.'])
+    subprocess.call(['git', 'checkout', 'master'])
+    subprocess.call(['git', 'clean', '-fd'])
+    subprocess.call(['git', 'checkout', v])
     os.chdir(predir)
 
 # for plugin: vimgdb or vim-lldb  

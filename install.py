@@ -280,7 +280,7 @@ if 'mac' == envinfo.os_type:
     None
 
 if 'linux' == envinfo.os_type:
-    command.append('--enable-gui=gtk2')
+    # command.append('--enable-gui=gtk2')
     command.append('--enable-gdb')
 subprocess.call(command)
 subprocess.call(['make', 'clean']) 

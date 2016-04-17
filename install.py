@@ -148,35 +148,34 @@ elif 'linux' == envinfo.os_type:
 
 # for plugin: YouCompleteMe 
 # ---------------------------------------------------
-if 'mac' == envinfo.os_type:
-    # dep: clang+llvm
-    ver = submodules['YouCompleteMe']['dep']['LLVM'].replace('v','')
-    url = 'http://llvm.org/releases/' + ver + '/'
-    filename = 'clang+llvm-' + ver + '-x86_64-apple-darwin.tar.xz' 
-    url += filename
-    decompressdir = 'clang+llvm'
-    if os.path.isfile(filename):
-        subprocess.call(['rm', '-f', filename])
-
-    subprocess.call(['wget', url])
-    subprocess.call(['mkdir', decompressdir])
-
-    subprocess.call(['tar', 'xfv', filename, 
-        '-C', './' + decompressdir, '--strip-components=1'])
+# dep: clang+llvm
+ver = submodules['YouCompleteMe']['dep']['LLVM'].replace('v','')
+url = 'http://llvm.org/releases/' + ver + '/'
+filename = 'clang+llvm-' + ver + '-x86_64-apple-darwin.tar.xz' 
+url += filename
+decompressdir = 'clang+llvm'
+if os.path.isfile(filename):
     subprocess.call(['rm', '-f', filename])
 
-    subprocess.call(['mkdir', 'ycm_build'])
-    predir = os.getcwd()
-    dstdir = './ycm_build' 
-    os.chdir(dstdir)
+subprocess.call(['wget', url])
+subprocess.call(['mkdir', decompressdir])
 
-    python = '/usr/bin/python' + envinfo.python_ver  
-    subprocess.call(['cmake', '-G', 'Unix Makefiles', 
-        '-DPATH_TO_LLVM_ROOT=../' + decompressdir, 
-        '-DPYTHON_EXECUTABLE=' + python, '.', 
-        '../.vim/bundle/YouCompleteMe/third_party/ycmd/cpp'])
-    subprocess.call(['make']) 
-    os.chdir(predir)
+subprocess.call(['tar', 'xfv', filename, 
+    '-C', './' + decompressdir, '--strip-components=1'])
+subprocess.call(['rm', '-f', filename])
+
+subprocess.call(['mkdir', 'ycm_build'])
+predir = os.getcwd()
+dstdir = './ycm_build' 
+os.chdir(dstdir)
+
+python = '/usr/bin/python' + envinfo.python_ver  
+subprocess.call(['cmake', '-G', 'Unix Makefiles', 
+    '-DPATH_TO_LLVM_ROOT=../' + decompressdir, 
+    '-DPYTHON_EXECUTABLE=' + python, '.', 
+    '../.vim/bundle/YouCompleteMe/third_party/ycmd/cpp'])
+subprocess.call(['make']) 
+os.chdir(predir)
 
 # create .vimstudio in user home  
 # ---------------------------------------------------

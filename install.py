@@ -151,7 +151,12 @@ elif 'linux' == envinfo.os_type:
 # dep: clang+llvm
 ver = submodules['YouCompleteMe']['dep']['LLVM'].replace('v','')
 url = 'http://llvm.org/releases/' + ver + '/'
-filename = 'clang+llvm-' + ver + '-x86_64-apple-darwin.tar.xz' 
+filename = 'clang+llvm-' + ver 
+if 'mac' == envinfo.os_type:
+    filename += '-x86_64-apple-darwin.tar.xz' 
+elif 'linux' == envinfo.os_type:
+    if 'kali' == envinfo.os_name:
+        filename += '-x86_64-linux-gnu-debian8.tar.xz' 
 url += filename
 decompressdir = 'clang+llvm'
 if os.path.isfile(filename):
@@ -174,7 +179,7 @@ subprocess.call(['cmake', '-G', 'Unix Makefiles',
     '-DPATH_TO_LLVM_ROOT=../' + decompressdir, 
     '-DPYTHON_EXECUTABLE=' + python, '.', 
     '../.vim/bundle/YouCompleteMe/third_party/ycmd/cpp'])
-subprocess.call(['make']) 
+subprocess.call(['make', 'ycm_core']) 
 os.chdir(predir)
 
 # create .vimstudio in user home  
@@ -269,7 +274,7 @@ command = ['./configure',
     #'--enable-rubyinterp',
     #'--enable-luainterp',
     #'--enable-perlinterp',
-    # '--enable-gui=yes',
+    #'--enable-gui=yes',
     '--enable-cscope',
     '--with-python-config-dir=/usr/lib/python' 
         + envinfo.python_ver + '/config/',

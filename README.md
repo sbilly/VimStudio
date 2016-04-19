@@ -135,9 +135,6 @@ r：修改当前光标下的值
 <a name="">[vim-colorschemes][30-1]</a> <sup>[master][30-2]</sup>  
 *主题*  
 
-<a name="">[vim-fixkey][31-1]</a> <sup>[v0.3.6][31-2]</sup>  
-*键盘映射修正*    
-
 ## 依赖     
 <a name="llvm">[LLVM][27-1]</a> <sup>[v3.8.0][27-2]</sup>  
 
@@ -207,6 +204,4 @@ r：修改当前光标下的值
 [29-2]:https://github.com/gilligan/vim-lldb
 [30-1]:https://github.com/flazz/vim-colorschemes
 [30-2]:https://github.com/flazz/vim-colorschemes
-[31-1]:https://github.com/drmikehenry/vim-fixkey
-[31-2]:https://github.com/drmikehenry/vim-fixkey/releases/tag/v0.3.6
 

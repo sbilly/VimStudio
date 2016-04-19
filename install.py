@@ -205,6 +205,8 @@ subprocess.call(['cp', src, dst])
 dst = home + '/.vimstudio/.vim/'
 src = './.vim/doc'
 subprocess.call(['cp', '-r', src, dst])
+src = './.vim/.ycm_extra_conf.py'
+subprocess.call(['cp', src, dst])
 for name, ver in submodules.iteritems():
     if 'vim' == name:
         continue

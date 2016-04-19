@@ -160,7 +160,6 @@ nnoremap <F1> :GundoToggle<CR>
 let g:gundo_width=60
 let g:gundo_preview_height=20
 
-
 " plugin: YouCompleteMe
 " ------------------------------------------------------------------------
 " YCM 补全菜单配色
@@ -186,6 +185,22 @@ let g:ycm_min_num_of_chars_for_completion=1
 let g:ycm_cache_omnifunc=0
 " 语法关键字补全         
 let g:ycm_seed_identifiers_with_syntax=1
+
+function! CheckYCMConfFile()
+python << endpython
+import os
+import vim
+filename = '.ycm_extra_conf.py' 
+curbuf = vim.current.buffer
+s = str(curbuf)
+if -1 != s.find('.c') or -1 != s.find('.h'):
+    if not os.path.isfile(filename):
+        os.system('cp ~/.vimstudio/.vim/' + filename + ' ./')
+# anArg = vim.eval("a:anArg")
+# vim.command("return 1") # return from the Vim function!
+endpython
+endfunction
+call CheckYCMConfFile()
 
 " plugin: ctrlsf.vim
 " ------------------------------------------------------------------------

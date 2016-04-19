@@ -205,4 +205,3 @@ r：修改当前光标下的值
 [30-1]:https://github.com/flazz/vim-colorschemes
 [30-2]:https://github.com/flazz/vim-colorschemes
 
-

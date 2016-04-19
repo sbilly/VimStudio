@@ -1,7 +1,9 @@
 # VimStudio  
 Not visual studio !  
 
-![1000](resource/logo_1.png)
+![1000](resource/logo_1.png)  
+
+[Wiki](https://github.com/xushvai/VimStudio/wiki)
 
 ## Quick Start  
 

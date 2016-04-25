@@ -273,10 +273,10 @@ function! s:Toggle()
 	nmap <silent> I :call gdb("stepi")<CR>
 	nmap <silent> <F10> :call gdb("next")<CR>
 	nmap <silent> X :call gdb("nexti")<CR>
-	nmap <silent> F :call gdb("finish")<CR>
+	nmap <silent> <S-F11> :call gdb("finish")<CR>
 	nmap <silent> R :call gdb("run")<CR>
 	nmap <silent> Q :call gdb("quit")<CR>
-	nmap <silent> C :call gdb("continue")<CR>
+	nmap <silent> <S-F5> :call gdb("continue")<CR>
 	nmap <silent> W :call gdb("where")<CR>
 	nmap <silent> <C-U> :call gdb("up")<CR>
 	nmap <silent> <C-D> :call gdb("down")<CR>
@@ -309,10 +309,10 @@ function! s:Toggle()
 	nunmap I
 	nunmap <F10>
 	nunmap X
-	nunmap F
+	nunmap <S-F11> 
 	nunmap R
 	nunmap Q
-	nunmap C
+	nunmap <S-F5> 
 	nunmap W
 	nunmap <C-U>
 	nunmap <C-D>

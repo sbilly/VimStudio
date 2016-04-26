@@ -127,11 +127,28 @@ nnoremap <Leader>rwc :call Replace(1, 1, input('Replace '.expand('<cword>').' wi
 " 调用wmctrl程序实现全屏 
 " ------------------------------------------------------------------------
 " 将外部命令wmctrl控制窗口最大化的命令行参数封装成一个vim 的函数
+let s:is_toggled_fullscreen = 0
+python << endpython
+lines = 50
+columns = 50
+endpython
 fun! ToggleFullscreen()
-	call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")
+    call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")
+python << endpython
+import os
+import vim
+if not int(vim.eval("s:is_toggled_fullscreen")):
+    vim.command("let s:is_toggled_fullscreen=1")
+    lines, columns = os.popen('stty size', 'r').read().split()
+else:
+    vim.command("let s:is_toggled_fullscreen=0")
+    vim.command("set lines="+str(lines))
+    vim.command("set columns="+str(columns))
+endpython
 endf
+
 " 全屏开/关快捷键
-" map <silent> <F11> :call ToggleFullscreen()<CR>
+map <silent> <F12> :call ToggleFullscreen()<CR>
 
 " 启动 vim 时自动全屏
 autocmd VimEnter * call ToggleFullscreen()
@@ -277,7 +294,7 @@ function! s:Toggle()
 	nmap <silent> R :call gdb("run")<CR>
 	nmap <silent> Q :call gdb("quit")<CR>
 	nmap <silent> <S-F5> :call gdb("continue")<CR>
-	" nmap <silent> <A-7> :call gdb("bt")<CR>
+	" nmap <silent> <7> :call gdb("bt")<CR>
 	nmap <silent> W :call gdb("where")<CR>
 	nmap <silent> <C-U> :call gdb("up")<CR>
 	nmap <silent> <C-D> :call gdb("down")<CR>
@@ -314,7 +331,7 @@ function! s:Toggle()
 	nunmap R
 	nunmap Q
 	nunmap <S-F5> 
-	" nunmap <A-7> 
+	nunmap <A-7> 
 	nunmap W
 	nunmap <C-U>
 	nunmap <C-D>
@@ -412,7 +429,7 @@ let NERDTreeMinimalUI=1
 " 删除文件时自动删除文件对应的buffer
 let NERDTreeAutoDeleteBuffer=1
 
-nnoremap <silent> <F12> :NERDTreeToggle<CR>
+" nnoremap <silent> <F12> :NERDTreeToggle<CR>
 " nnoremap <silent> <C-l> :NERDTreeToggle<CR>
 " nnoremap <silent> <C-l> :NERDTree<CR>
 

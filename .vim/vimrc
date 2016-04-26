@@ -86,8 +86,10 @@ function! Make()
 	execute 'make %:r.o'
 	execute 'lcd -'
 endfunction
-nnoremap <F7> :update<CR>:call Make()<CR>
+"nnoremap <F7> :update<CR>:call Make()<CR>
 "nnoremap <silent> <F7> :make!<CR><CR>:cw<CR>
+
+nnoremap <F7> :Make<CR>
 
 " 内容替换
 " ------------------------------------------------------------------------
@@ -125,11 +127,29 @@ nnoremap <Leader>rwc :call Replace(1, 1, input('Replace '.expand('<cword>').' wi
 " 调用wmctrl程序实现全屏 
 " ------------------------------------------------------------------------
 " 将外部命令wmctrl控制窗口最大化的命令行参数封装成一个vim 的函数
+let s:is_toggled_fullscreen = 0
+python << endpython
+lines = 50
+columns = 50
+endpython
 fun! ToggleFullscreen()
-	call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")
+    call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")
+python << endpython
+import os
+import vim
+if not int(vim.eval("s:is_toggled_fullscreen")):
+    vim.command("let s:is_toggled_fullscreen=1")
+    lines, columns = os.popen('stty size', 'r').read().split()
+else:
+    vim.command("let s:is_toggled_fullscreen=0")
+    vim.command("set lines="+str(lines))
+    vim.command("set columns="+str(columns))
+endpython
 endf
+
 " 全屏开/关快捷键
-map <silent> <F11> :call ToggleFullscreen()<CR>
+map <silent> <F12> :call ToggleFullscreen()<CR>
+
 " 启动 vim 时自动全屏
 autocmd VimEnter * call ToggleFullscreen()
 
@@ -202,6 +222,146 @@ endpython
 endfunction
 call CheckYCMConfFile()
 
+" plugin: vimgdb
+" ------------------------------------------------------------------------
+" Mappings example for use with gdb
+" Maintainer:	<xdegaye at users dot sourceforge dot net>
+" Last Change:	Mar 6 2006
+
+if ! has("gdb")
+    finish
+endif
+
+let s:is_toggled = 0 
+let s:gdb_k = 1
+function! ToggleGDB()
+    if !s:is_toggled
+        if getwinvar(0,'&statusline') != ""
+            :set autochdir
+            :cd %:p:h
+            :only
+            set statusline=
+            :call <SID>Toggle()
+            let s:is_toggled = 1
+        else
+            set statusline+=%F%m%r%h%w\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]
+            :set noautochdir
+            :call <SID>Toggle()
+            let s:is_toggled = 1
+        endif
+    endif
+
+python << endpython
+import os
+import vim
+filename = 'CMakeLists.txt' 
+cmd = ":call gdb" 
+if os.path.isfile(filename):
+    f = open(filename, 'r')
+    content = f.read()
+    f.close()
+    target_file = content.split('add_executable(', 1)[1].split(' ', 1)[0]
+    cmd += "(\"file " + target_file + "\")"  
+else:
+    cmd += "(\"\")"    
+vim.command(cmd)
+endpython
+endfunction
+
+function! SToggleGDB()
+    :MiniBufExplorer
+    set statusline+=%F%m%r%h%w\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]
+    :call <SID>Toggle()
+endfunction
+nmap <silent><F5>  :call ToggleGDB()<cr>
+nmap <silent><C-F5>  :call <SID>Toggle()<cr>
+
+" Toggle between vim default and custom mappings
+function! s:Toggle()
+    if s:gdb_k
+	let s:gdb_k = 0
+	map <Space> :call gdb("")<CR>
+	nmap <silent> <C-Z> :call gdb("\032")<CR>
+
+	nmap <silent> B :call gdb("info breakpoints")<CR>
+	nmap <silent> L :call gdb("info locals")<CR>
+	nmap <silent> A :call gdb("info args")<CR>
+	nmap <silent> <F11> :call gdb("step")<CR>
+	nmap <silent> I :call gdb("stepi")<CR>
+	nmap <silent> <F10> :call gdb("next")<CR>
+	nmap <silent> X :call gdb("nexti")<CR>
+	nmap <silent> <S-F11> :call gdb("finish")<CR>
+	nmap <silent> R :call gdb("run")<CR>
+	nmap <silent> Q :call gdb("quit")<CR>
+	nmap <silent> <S-F5> :call gdb("continue")<CR>
+	" nmap <silent> <7> :call gdb("bt")<CR>
+	nmap <silent> W :call gdb("where")<CR>
+	nmap <silent> <C-U> :call gdb("up")<CR>
+	nmap <silent> <C-D> :call gdb("down")<CR>
+
+	" set/clear bp at current line
+	nmap <silent> <F9> :call <SID>Breakpoint("break")<CR>
+	nmap <silent> <C-F9> :call <SID>Breakpoint("clear")<CR>
+
+	" print value at cursor
+	nmap <silent> <C-P> :call gdb("print " . expand("<cword>"))<CR>
+
+	" display Visual selected expression
+	vmap <silent> <C-P> y:call gdb("createvar " . "<C-R>"")<CR>
+
+	" print value referenced by word at cursor
+	nmap <silent> <C-X> :call gdb("print *" . expand("<cword>"))<CR>
+
+    " Restore vim defaults
+    else
+	let s:gdb_k = 1
+    let s:is_toggled = 0 
+    :call gdb("quit")
+
+	nunmap <Space>
+	nunmap <C-Z>
+	nunmap B
+	nunmap L
+	nunmap A
+	nunmap <F11>
+	nunmap I
+	nunmap <F10>
+	nunmap X
+	nunmap <S-F11> 
+	nunmap R
+	nunmap Q
+	nunmap <S-F5> 
+	nunmap <A-7> 
+	nunmap W
+	nunmap <C-U>
+	nunmap <C-D>
+	nunmap <F9>
+	nunmap <C-F9>
+	nunmap <C-P>
+	nunmap <C-X>
+    endif
+endfunction
+
+" Run cmd on the current line in assembly or symbolic source code
+" parameter cmd may be 'break' or 'clear'
+function! s:Breakpoint(cmd)
+    " An asm buffer (a 'nofile')
+    if &buftype == "nofile"
+	" line start with address 0xhhhh...
+	let s = substitute(getline("."), "^\\s*\\(0x\\x\\+\\).*$", "*\\1", "")
+	if s != "*"
+	    call gdb(a:cmd . " " . s)
+	endif
+    " A source file
+    else
+	let s = "\"" . fnamemodify(expand("%"), ":p") . ":" . line(".") . "\""
+	call gdb(a:cmd . " " . s)
+    endif
+endfunction
+" map vimGdb keys
+"call s:Toggle()
+
+
 " plugin: ctrlsf.vim
 " ------------------------------------------------------------------------
 " 全局搜索当前光标所在的关键字
@@ -269,8 +429,9 @@ let NERDTreeMinimalUI=1
 " 删除文件时自动删除文件对应的buffer
 let NERDTreeAutoDeleteBuffer=1
 
-nnoremap <silent> <C-F10> :NERDTreeToggle<CR>
-nnoremap <silent> <F10> :NERDTree<CR>
+" nnoremap <silent> <F12> :NERDTreeToggle<CR>
+" nnoremap <silent> <C-l> :NERDTreeToggle<CR>
+" nnoremap <silent> <C-l> :NERDTree<CR>
 
 " plugin: ultisnips 
 " ------------------------------------------------------------------------
@@ -321,7 +482,7 @@ let g:tagbar_type_cpp = {
 	\ }
 \ }
 
-nnoremap <silent> <F11> :TagbarToggle<CR>
+" nnoremap <silent> <F11> :TagbarToggle<CR>
 
 " plugin: taglist
 " ------------------------------------------------------------------------
@@ -379,6 +540,3 @@ fun! ToggleVinarise()
         let $in_vinarise=1
     endif
 endf
-nnoremap <C-h> :call ToggleVinarise()<CR>
-
-

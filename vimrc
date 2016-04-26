@@ -277,6 +277,7 @@ function! s:Toggle()
 	nmap <silent> R :call gdb("run")<CR>
 	nmap <silent> Q :call gdb("quit")<CR>
 	nmap <silent> <S-F5> :call gdb("continue")<CR>
+	" nmap <silent> <A-7> :call gdb("bt")<CR>
 	nmap <silent> W :call gdb("where")<CR>
 	nmap <silent> <C-U> :call gdb("up")<CR>
 	nmap <silent> <C-D> :call gdb("down")<CR>
@@ -313,6 +314,7 @@ function! s:Toggle()
 	nunmap R
 	nunmap Q
 	nunmap <S-F5> 
+	" nunmap <A-7> 
 	nunmap W
 	nunmap <C-U>
 	nunmap <C-D>

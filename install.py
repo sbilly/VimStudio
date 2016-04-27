@@ -264,6 +264,27 @@ f = open(filepath, 'w')
 f.write(content_str)
 f.close()
 
+# change os_unix.c for bug
+if 'mac' == envinfo.os_type:
+    filepath = './vim/src/os_unix.c' 
+    f = open(filepath, 'r')
+    content = f.readlines()
+    target_str = 'const struct sigaltstack *ss, struct sigaltstack *oss'
+    replace_str = 'const stack_t *restrict ss, stack_t *restrict oss'
+    content_str = ''
+    cond = False
+    for line in content:
+        if -1 != line.find(target_str):
+            cond = True
+        if cond:
+            line = line.replace(target_str, replace_str)
+        cond = False
+        line_str = "".join(line)
+        content_str = content_str + line_str
+    f = open(filepath, 'w')
+    f.write(content_str)
+    f.close()
+
 # config, make, make install
 predir = os.getcwd()
 dstdir = 'vim'

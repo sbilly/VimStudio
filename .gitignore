@@ -5,3 +5,6 @@
 /tags
 
 .vim/plugin/fcitx.vim
+
+clang+llvm/
+ycm_build/

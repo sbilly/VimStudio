@@ -302,6 +302,7 @@ if 'mac' == envinfo.os_type:
 
 if 'linux' == envinfo.os_type:
     # command.append('--enable-gui=gtk2')
+    None
 
 subprocess.call(command)
 subprocess.call(['make', 'clean']) 

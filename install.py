@@ -101,36 +101,31 @@ for name, ver in submodules.iteritems():
     subprocess.call(['git', 'checkout', v])
     os.chdir(predir)
 
-# for plugin: vimgdb or vim-lldb  
+# for plugin: vimgdb  
 # ---------------------------------------------------
 home = os.path.expanduser('~')
-if 'linux' == envinfo.os_type:
-    # use vimgdb
-    subprocess.call(['cp', '-r', '.vim/bundle/vimgdb-for-vim7.4', './'])
-    patch_path = 'vimgdb-for-vim7.4/vim74.patch'
-    f = open(patch_path, 'r')
-    content = f.read()
-    f.close()
-    content = content.replace('vim74', 'vim')
-    content = content.replace('vimgdb74', 'vimgdb-for-vim7.4')
-    f = open(patch_path, 'w')
-    f.write(content)
-    f.close()
-    os.system('patch -p0 < ' + patch_path)
-    subprocess.call(['rm', '-rf', './vimgdb-for-vim7.4'])
-    # Copy vimgdb_runtime to .vim
-    srcpath = '.vim/bundle/vimgdb-for-vim7.4/'
-    dstpath = home + '/.vimstudio/.vim/'
-    os.system('cp -r ' + srcpath 
-        + 'vimgdb_runtime/doc/* ' + dstpath + 'doc')
-    os.system('cp -r ' + srcpath 
-        + 'vimgdb_runtime/macros ' + dstpath)
-    os.system('cp -r ' + srcpath 
-        + 'vimgdb_runtime/syntax ' + dstpath)
-
-elif 'mac' == envinfo.os_type:
-    # use vim-lldb
-    None
+# use vimgdb
+subprocess.call(['cp', '-r', '.vim/bundle/vimgdb-for-vim7.4', './'])
+patch_path = 'vimgdb-for-vim7.4/vim74.patch'
+f = open(patch_path, 'r')
+content = f.read()
+f.close()
+content = content.replace('vim74', 'vim')
+content = content.replace('vimgdb74', 'vimgdb-for-vim7.4')
+f = open(patch_path, 'w')
+f.write(content)
+f.close()
+os.system('patch -p0 < ' + patch_path)
+subprocess.call(['rm', '-rf', './vimgdb-for-vim7.4'])
+# Copy vimgdb_runtime to .vim
+srcpath = '.vim/bundle/vimgdb-for-vim7.4/'
+dstpath = home + '/.vimstudio/.vim/'
+os.system('cp -r ' + srcpath 
+    + 'vimgdb_runtime/doc/* ' + dstpath + 'doc')
+os.system('cp -r ' + srcpath 
+    + 'vimgdb_runtime/macros ' + dstpath)
+os.system('cp -r ' + srcpath 
+    + 'vimgdb_runtime/syntax ' + dstpath)
 
 # for plugin: fcitx
 # ---------------------------------------------------
@@ -222,15 +217,12 @@ for name, ver in submodules.iteritems():
 # chage .vimrc file default search path
 filepath = './vim/src/feature.h' 
 insert_content = '#define USR_VIMRC_FILE \"~/.vimstudio/.vimrc\"'
-insert_line = 896
 f = open(filepath, 'r')
-content = f.readlines()
+content = f.read()
 f.close()
-tmp = "".join(content)
-if -1 == tmp.find(insert_content):
-    content.insert(insert_line, insert_content)
+if -1 == content.find(insert_content):
     f = open(filepath, 'w')
-    content = "".join(content)
+    content += insert_content 
     f.write(content)
     f.close()
 
@@ -294,6 +286,7 @@ command = ['./configure',
     '--with-vim-name=vimstudio',
     '--with-features=huge', 
     '--enable-pythoninterp',
+    '--enable-gdb',
     #'--enable-rubyinterp',
     #'--enable-luainterp',
     #'--enable-perlinterp',
@@ -309,7 +302,7 @@ if 'mac' == envinfo.os_type:
 
 if 'linux' == envinfo.os_type:
     # command.append('--enable-gui=gtk2')
-    command.append('--enable-gdb')
+
 subprocess.call(command)
 subprocess.call(['make', 'clean']) 
 subprocess.call(['make']) 

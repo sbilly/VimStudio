@@ -72,26 +72,6 @@ source $VIMRUNTIME/ftplugin/man.vim
 " 定义:Man命令查看各类man信息的快捷键(\man)
 nmap <Leader>man :Man 2 <cword><CR>
 
-" 一键编译
-" ------------------------------------------------------------------------
-" Save and make current file.o
-function! Make()
-	let curr_dir = expand('%:h')
-	if curr_dir == ''
-		let curr_dir = '.'
-	endif
-	echo curr_dir
-	execute 'lcd ' . curr_dir
-	execute 'make clean'
-	execute 'make %:r.o'
-	execute 'lcd -'
-    :NERDTreeClose
-    :NERDTree
-endfunction
-"nnoremap <F7> :update<CR>:call Make()<CR>
-"nnoremap <silent> <F7> :make!<CR><CR>:cw<CR>
-nnoremap <F7> :Make<CR>
-
 " 内容替换
 " ------------------------------------------------------------------------
 " 替换函数,参数说明：
@@ -385,38 +365,24 @@ let g:miniBufExplModSelTarget=1
 map <C-Tab> :MBEbn<CR>
 map <C-S-Tab> :MBEbp<CR>
 
-" plugin: vim-cmake
+nnoremap <S-F7> :call GenerateMakefile()<CR>
+
+" 生成Makefile
 " ------------------------------------------------------------------------
-let g:cmake_build_dir='build'
 function! GenerateMakefile()
-    if !isdirectory(g:cmake_build_dir)
-        call mkdir(g:cmake_build_dir)
-    endif
-    :CMake
-    :NERDTreeClose
-    :NERDTree
+    echo system('cmake CMakeLists.txt')
 endfunction
 nnoremap <S-F7> :call GenerateMakefile()<CR>
 
-" 一键编译
+" 构建(执行Makefile) 
 " ------------------------------------------------------------------------
-" Save and make current file.o
+" 对vim-dispatch进行包装
 function! Make()
-	let curr_dir = expand('%:h')
-	if curr_dir == ''
-		let curr_dir = './'
-	endif
-	echo curr_dir
-	execute 'lcd ' . curr_dir
-	execute 'make clean'
-	execute 'make %:r.o'
-	execute 'lcd -'
+    :Make
     :NERDTreeClose
     :NERDTree
 endfunction
-"nnoremap <F7> :update<CR>:call Make()<CR>
-"nnoremap <silent> <F7> :make!<CR><CR>:cw<CR>
-nnoremap <F7> :Make<CR>
+nnoremap <F7> :call Make()<CR>
 
 " plugin: vim-airline
 " ------------------------------------------------------------------------

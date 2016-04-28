@@ -358,14 +358,11 @@ let g:miniBufExplMapWindowNavArrows=1
 let g:miniBufExplMapCTabSwitchBufs=1 
 let g:miniBufExplModSelTarget=1 
 
-
 " 显示/隐藏MiniBufExplorer窗口
 "map <Leader>bl :MBEToggle<CR>
 " buf切换
-map <C-Tab> :MBEbn<CR>
-map <C-S-Tab> :MBEbp<CR>
-
-nnoremap <S-F7> :call GenerateMakefile()<CR>
+noremap <silent> <C-o> :MBEbn<CR>
+noremap <silent> <C-i> :MBEbp<CR>
 
 " 生成Makefile
 " ------------------------------------------------------------------------

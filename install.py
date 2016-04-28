@@ -290,7 +290,7 @@ command = ['./configure',
     #'--enable-rubyinterp',
     #'--enable-luainterp',
     #'--enable-perlinterp',
-    #'--enable-gui=yes',
+    '--enable-gui=auto',
     '--enable-cscope',
     '--with-python-config-dir=/usr/lib/python' 
         + envinfo.python_ver + '/config/',
@@ -301,7 +301,6 @@ if 'mac' == envinfo.os_type:
     None
 
 if 'linux' == envinfo.os_type:
-    # command.append('--enable-gui=gtk2')
     None
 
 subprocess.call(command)

@@ -23,6 +23,9 @@ python install.py
 ```
 /opt/bin/vimstudio  
 ```
+```
+/opt/bin/gvimstudio  
+```
 
 ## Usage    
 

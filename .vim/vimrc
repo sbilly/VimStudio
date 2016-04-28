@@ -12,6 +12,12 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
+" copy, paste
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <C-r><C-o>+
+
 " don't beep
 set visualbell
 set noerrorbells
@@ -342,13 +348,20 @@ endfunction
 " map vimGdb keys
 "call s:Toggle()
 
-
 " plugin: ctrlsf.vim
 " ------------------------------------------------------------------------
-" 全局搜索当前光标所在的关键字
-nnoremap <Leader>sp :CtrlSF<CR>
 " 不自动关闭结果窗口
 let g:ctrlsf_auto_close = 0
+
+function! SearchByInput()
+    let curline = getline('.')
+    let content = input('Search what: ')
+    execute "CtrlSF " . content 
+endfunction
+
+" 全局搜索当前光标所在的关键字
+nnoremap <silent> <C-F> :CtrlSF<CR>
+nnoremap <silent> <C-S-F> :call SearchByInput() <CR>
 
 " plugin: MiniBufExplorer
 " ------------------------------------------------------------------------
@@ -536,3 +549,4 @@ fun! ToggleVinarise()
         let $in_vinarise=1
     endif
 endf
+

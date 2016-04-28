@@ -1,6 +1,7 @@
 .VimballRecord
 /test
 .netrwhist
+*.pyc
 *.swp
 /tags
 

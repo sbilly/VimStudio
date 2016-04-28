@@ -85,10 +85,11 @@ function! Make()
 	execute 'make clean'
 	execute 'make %:r.o'
 	execute 'lcd -'
+    :NERDTreeClose
+    :NERDTree
 endfunction
 "nnoremap <F7> :update<CR>:call Make()<CR>
 "nnoremap <silent> <F7> :make!<CR><CR>:cw<CR>
-
 nnoremap <F7> :Make<CR>
 
 " 内容替换
@@ -384,6 +385,38 @@ let g:miniBufExplModSelTarget=1
 map <C-Tab> :MBEbn<CR>
 map <C-S-Tab> :MBEbp<CR>
 
+" plugin: vim-cmake
+" ------------------------------------------------------------------------
+let g:cmake_build_dir='build'
+function! GenerateMakefile()
+    if !isdirectory(g:cmake_build_dir)
+        call mkdir(g:cmake_build_dir)
+    endif
+    :CMake
+    :NERDTreeClose
+    :NERDTree
+endfunction
+nnoremap <S-F7> :call GenerateMakefile()<CR>
+
+" 一键编译
+" ------------------------------------------------------------------------
+" Save and make current file.o
+function! Make()
+	let curr_dir = expand('%:h')
+	if curr_dir == ''
+		let curr_dir = './'
+	endif
+	echo curr_dir
+	execute 'lcd ' . curr_dir
+	execute 'make clean'
+	execute 'make %:r.o'
+	execute 'lcd -'
+    :NERDTreeClose
+    :NERDTree
+endfunction
+"nnoremap <F7> :update<CR>:call Make()<CR>
+"nnoremap <silent> <F7> :make!<CR><CR>:cw<CR>
+nnoremap <F7> :Make<CR>
 
 " plugin: vim-airline
 " ------------------------------------------------------------------------

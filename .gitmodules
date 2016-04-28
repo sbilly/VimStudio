@@ -109,9 +109,16 @@
 [submodule ".vim/bundle/vim-lldb"]
 	path = .vim/bundle/vim-lldb
 	url = https://github.com/gilligan/vim-lldb
+	ignore = all
 [submodule ".vim/bundle/vim-colorschemes"]
 	path = .vim/bundle/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes
+	ignore = all
 [submodule ".vim/bundle/vimgdb-for-vim7.4"]
 	path = .vim/bundle/vimgdb-for-vim7.4
 	url = https://github.com/larrupingpig/vimgdb-for-vim7.4
+	ignore = all
+[submodule ".vim/bundle/vim-dispatch"]
+	path = .vim/bundle/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch
+	ignore = all

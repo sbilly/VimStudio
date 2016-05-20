@@ -12,6 +12,9 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
+" backspace over auto-indentation, previous edits or line breaks.
+set backspace=indent,eol,start
+
 " copy, paste
 vmap <C-c> "+yi
 vmap <C-x> "+c

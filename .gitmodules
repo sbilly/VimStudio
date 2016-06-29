@@ -122,3 +122,8 @@
 	path = .vim/bundle/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch
 	ignore = all
+[submodule "macvim"]
+	path = macvim
+	url = https://github.com/b4winckler/macvim.git
+	ignore = all
+[submodule "macvim"]

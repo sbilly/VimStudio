@@ -42,6 +42,7 @@ gx : 打开超链接
 
 ## Vim版本
 <a name="">[vim][0-1]</a> <sup>[v7.4][0-2]</sup>  
+<a name="">[macvim][100-1]</a> <sup>[snapshot-73][100-2]</sup>  
 
 ## 插件  
 
@@ -144,6 +145,8 @@ gx : 打开超链接
 
 [0-1]:https://github.com/vim/vim
 [0-2]:https://github.com/vim/vim/releases/tag/v7.4
+[100-1]:https://github.com/b4winckler/macvim
+[100-2]:https://github.com/b4winckler/macvim/releases/tag/snapshot-73
 [1-1]:https://github.com/suan/vim-instant-markdown
 [1-2]:https://github.com/suan/vim-instant-markdown/releases/tag/v0.0.7
 [2-1]:https://github.com/Shougo/vinarise.vim

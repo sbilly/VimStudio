@@ -89,7 +89,7 @@ subprocess.call(["git", "submodule",
 # ---------------------------------------------------
 for name, ver in submodules.iteritems():
     predir = os.getcwd()
-    if 'vim' == name or 'macvim' == name:
+    if 'vim' == name:
         dstdir = name
     else:
         dstdir = '.vim/bundle/' + name
@@ -127,7 +127,6 @@ os.system('cp -r ' + srcpath
 os.system('cp -r ' + srcpath 
     + 'vimgdb_runtime/syntax ' + dstpath)
 
-
 # for plugin: fcitx
 # ---------------------------------------------------
 if 'mac' == envinfo.os_type:
@@ -142,8 +141,6 @@ elif 'linux' == envinfo.os_type:
             "fcitx", "fcitx-sunpinyin", 
             "fcitx-libpinyin"])
 
-
-'''
 # for plugin: YouCompleteMe 
 # ---------------------------------------------------
 # dep: clang+llvm
@@ -180,8 +177,6 @@ subprocess.call(['cmake', '-G', 'Unix Makefiles',
 subprocess.call(['make', 'ycm_core']) 
 os.chdir(predir)
 
-'''
-
 # create .vimstudio in user home  
 # ---------------------------------------------------
 newpath = home + '/.vimstudio/.vim/bundle'
@@ -208,7 +203,7 @@ subprocess.call(['cp', '-r', src, dst])
 src = './.vim/.ycm_extra_conf.py'
 subprocess.call(['cp', src, dst])
 for name, ver in submodules.iteritems():
-    if 'vim' == name or 'macvim' == name:
+    if 'vim' == name:
         continue
     if 'linux' == envinfo.os_type:
         if 'vim-lldb' == name:
@@ -220,11 +215,7 @@ for name, ver in submodules.iteritems():
 # compile install vim 
 # ---------------------------------------------------
 # chage .vimrc file default search path
-if 'mac' == envinfo.os_type:
-    filepath = './macvim/src/feature.h' 
-elif 'linux' == envinfo.os_type: 
-    filepath = './vim/src/feature.h' 
-
+filepath = './vim/src/feature.h' 
 insert_content = '#define USR_VIMRC_FILE \"~/.vimstudio/.vimrc\"'
 f = open(filepath, 'r')
 content = f.read()
@@ -237,10 +228,7 @@ if -1 == content.find(insert_content):
 
 # change .vim folder default search path 
 # unix os, os_unix.h include macos
-if 'mac' == envinfo.os_type:
-    filepath = './macvim/src/os_unix.h' 
-elif 'linux' == envinfo.os_type: 
-    filepath = './vim/src/os_unix.h' 
+filepath = './vim/src/os_unix.h' 
 f = open(filepath, 'r')
 content = f.readlines()
 f.close()
@@ -291,28 +279,11 @@ if 'mac' == envinfo.os_type:
 
 # config, make, make install
 predir = os.getcwd()
-if 'mac' == envinfo.os_type:
-    dstdir = 'macvim'
-    command = ['rm', 
-        '-f',
-        './' + dstdir + '/src/auto/config.cache',
-    ]
-    subprocess.call(command)
-elif 'linux' == envinfo.os_type: 
-    dstdir = 'vim'
+dstdir = 'vim'
 os.chdir(dstdir)
-
-# change name 
-command = ['sed', 
-    '-i', 
-    '-e', 
-    's/PRODUCT_NAME = MacVim/PRODUCT_NAME = VimStudio/g',
-    './src/MacVim/MacVim.xcodeproj/project.pbxproj',
-    ]
-subprocess.call(command)
-
 command = ['./configure', 
     '--prefix=/usr/local/bin',
+    '--with-vim-name=vimstudio',
     '--with-features=huge', 
     '--enable-pythoninterp',
     '--enable-gdb',
@@ -330,37 +301,12 @@ if 'mac' == envinfo.os_type:
     None
 
 if 'linux' == envinfo.os_type:
-    command.append('--with-vim-name=vimstudio')
     None
 
 subprocess.call(command)
 subprocess.call(['make', 'clean']) 
 subprocess.call(['make']) 
-
-if 'linux' == envinfo.os_type:
-    subprocess.call(['sudo', 'make', 'install']) 
-
-if 'mac' == envinfo.os_type:
-    command = [
-        'cp',
-        '-r',
-        './src/MacVim/build/Release/VimStudio.app', 
-        '/usr/local/bin/',
-    ]
-    subprocess.call(command)
-    command = ['sed', 
-        '-i', 
-        '-e', 
-        's/MacVim.app/VimStudio.app/g',
-        './src/MacVim/mvim',
-        ]
-    subprocess.call(command)
-    command = [
-        'cp',
-        './src/MacVim/mvim',
-        '/usr/local/bin/',
-    ]
-    subprocess.call(command)
-
+#subprocess.call(['clear']) 
+subprocess.call(['sudo', 'make', 'install']) 
+#subprocess.call(['clear']) 
 os.chdir(predir)
-

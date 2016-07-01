@@ -5,6 +5,8 @@
 *.swp
 /tags
 
+/.ycm_extra_conf.py
+
 .vim/plugin/fcitx.vim
 
 clang+llvm/

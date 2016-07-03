@@ -3,6 +3,7 @@
 .netrwhist
 *.pyc
 *.swp
+*.vmb
 /tags
 
 .vim/plugin/fcitx.vim

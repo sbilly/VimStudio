@@ -184,9 +184,6 @@ subprocess.call(['cp', src, dst])
 for name, ver in submodules.iteritems():
     if 'vim' == name:
         continue
-    if 'linux' == envinfo.os_type:
-        if 'vim-lldb' == name:
-            continue
     src = './.vim/bundle/' + name
     dst = home + '/.vimstudio/.vim/bundle/'
     subprocess.call(['cp', '-r', src, dst])

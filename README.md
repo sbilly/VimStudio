@@ -120,9 +120,6 @@ gx : 打开超链接
 <a name="">[ultisnips][26-1]</a> <sup>[v3.1][26-2]</sup>  
 *基于模板的代码补全*
 
-<a name="">[vimgdb-for-vim7.4][28-1]</a> <sup>[master][28-2]</sup>  
-*gdb in vim*
-
 <a name="">[vim-lldb][29-1]</a> <sup>[master][29-2]</sup>  
 *lldb in vim*
 
@@ -199,8 +196,6 @@ gx : 打开超链接
 [26-2]:https://github.com/SirVer/ultisnips/releases/tag/3.1
 [27-1]:https://github.com/llvm-mirror/llvm
 [27-2]:http://llvm.org/releases/download.html
-[28-1]:https://sourceforge.net/projects/clewn/files/vimGdb/
-[28-2]:https://github.com/larrupingpig/vimgdb-for-vim7.4
 [29-1]:https://github.com/gilligan/vim-lldb
 [29-2]:https://github.com/gilligan/vim-lldb
 [30-1]:https://github.com/flazz/vim-colorschemes

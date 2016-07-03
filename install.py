@@ -101,31 +101,7 @@ for name, ver in submodules.iteritems():
     subprocess.call(['git', 'checkout', v])
     os.chdir(predir)
 
-# for plugin: vimgdb  
-# ---------------------------------------------------
 home = os.path.expanduser('~')
-# use vimgdb
-subprocess.call(['cp', '-r', '.vim/bundle/vimgdb-for-vim7.4', './'])
-patch_path = 'vimgdb-for-vim7.4/vim74.patch'
-f = open(patch_path, 'r')
-content = f.read()
-f.close()
-content = content.replace('vim74', 'vim')
-content = content.replace('vimgdb74', 'vimgdb-for-vim7.4')
-f = open(patch_path, 'w')
-f.write(content)
-f.close()
-os.system('patch -p0 < ' + patch_path)
-subprocess.call(['rm', '-rf', './vimgdb-for-vim7.4'])
-# Copy vimgdb_runtime to .vim
-srcpath = '.vim/bundle/vimgdb-for-vim7.4/'
-dstpath = home + '/.vimstudio/.vim/'
-os.system('cp -r ' + srcpath 
-    + 'vimgdb_runtime/doc/* ' + dstpath + 'doc')
-os.system('cp -r ' + srcpath 
-    + 'vimgdb_runtime/macros ' + dstpath)
-os.system('cp -r ' + srcpath 
-    + 'vimgdb_runtime/syntax ' + dstpath)
 
 # for plugin: fcitx
 # ---------------------------------------------------
@@ -141,6 +117,7 @@ elif 'linux' == envinfo.os_type:
             "fcitx", "fcitx-sunpinyin", 
             "fcitx-libpinyin"])
 
+'''
 # for plugin: YouCompleteMe 
 # ---------------------------------------------------
 # dep: clang+llvm
@@ -176,6 +153,8 @@ subprocess.call(['cmake', '-G', 'Unix Makefiles',
     '../.vim/bundle/YouCompleteMe/third_party/ycmd/cpp'])
 subprocess.call(['make', 'ycm_core']) 
 os.chdir(predir)
+
+'''
 
 # create .vimstudio in user home  
 # ---------------------------------------------------

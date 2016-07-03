@@ -96,9 +96,6 @@ gx : 打开超链接
 <a name="">[YouCompleteMe][17-1]</a> <sup>[master][17-2]</sup> ==> [LLVM](#llvm)   
 *基于语意的代码自动补全，依赖于LLVM*  
 
-<a name="">[minibufexpl][18-1]</a> <sup>[v6.5.2][18-2]</sup>  
-*多文档编辑*
-
 <a name="">[vim-fswitch][19-1]</a> <sup>[master][19-2]</sup>  
 *快速切换接口与实现文件*
 
@@ -184,8 +181,6 @@ gx : 打开超链接
 [16-2]:https://github.com/kshenoy/vim-signature
 [17-1]:https://github.com/Valloric/YouCompleteMe.git
 [17-2]:https://github.com/Valloric/YouCompleteMe.git
-[18-1]:https://github.com/fholgado/minibufexpl.vim
-[18-2]:https://github.com/fholgado/minibufexpl.vim/releases/tag/v6.5.2
 [19-1]:https://github.com/derekwyatt/vim-fswitch.git
 [19-2]:https://github.com/derekwyatt/vim-fswitch.git
 [20-1]:https://github.com/vim-scripts/vim-auto-save.git

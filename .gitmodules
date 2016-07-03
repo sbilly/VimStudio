@@ -122,3 +122,9 @@
 	path = .vim/bundle/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch
 	ignore = all
+[submodule ".vim/bundle/vim-l9"]
+	path = .vim/bundle/vim-l9
+	url = https://github.com/clones/vim-l9
+[submodule ".vim/bundle/vim-fuzzyfinder"]
+	path = .vim/bundle/vim-fuzzyfinder
+	url = https://github.com/clones/vim-fuzzyfinder

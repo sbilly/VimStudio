@@ -6,6 +6,7 @@ import shutil
 import urllib
 import platform
 import subprocess
+from subprocess import Popen, PIPE
 from shutil import copyfile
 
 class EnvInfo:
@@ -103,6 +104,7 @@ for name, ver in submodules.iteritems():
 
 home = os.path.expanduser('~')
 
+'''
 # for plugin: fcitx
 # ---------------------------------------------------
 if 'mac' == envinfo.os_type:
@@ -117,7 +119,6 @@ elif 'linux' == envinfo.os_type:
             "fcitx", "fcitx-sunpinyin", 
             "fcitx-libpinyin"])
 
-'''
 # for plugin: YouCompleteMe 
 # ---------------------------------------------------
 # dep: clang+llvm
@@ -153,7 +154,6 @@ subprocess.call(['cmake', '-G', 'Unix Makefiles',
     '../.vim/bundle/YouCompleteMe/third_party/ycmd/cpp'])
 subprocess.call(['make', 'ycm_core']) 
 os.chdir(predir)
-
 '''
 
 # create .vimstudio in user home  
@@ -291,3 +291,11 @@ subprocess.call(['make'])
 subprocess.call(['sudo', 'cp', './src/vimstudio', '/opt/bin/']) 
 #subprocess.call(['clear']) 
 os.chdir(predir)
+
+# for plugin: pyclewn
+# ---------------------------------------------------
+subprocess.call(['sudo', 'pip', 'install', 'pyclewn'])
+import clewn; 
+clewn.get_vimball()
+clewn_version = clewn.__version__
+subprocess.call(['/opt/bin/vimstudio', '-S', 'pyclewn-' + clewn_version + '.vmb'])

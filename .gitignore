@@ -4,6 +4,7 @@
 *.pyc
 *.swp
 *.vmb
+*.tar.*
 /tags
 
 .vim/plugin/fcitx.vim

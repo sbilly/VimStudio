@@ -125,6 +125,8 @@
 [submodule ".vim/bundle/vim-l9"]
 	path = .vim/bundle/vim-l9
 	url = https://github.com/clones/vim-l9
+	ignore = all
 [submodule ".vim/bundle/vim-fuzzyfinder"]
 	path = .vim/bundle/vim-fuzzyfinder
 	url = https://github.com/clones/vim-fuzzyfinder
+	ignore = all

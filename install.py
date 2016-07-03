@@ -281,6 +281,10 @@ if 'mac' == envinfo.os_type:
 predir = os.getcwd()
 dstdir = 'vim'
 os.chdir(dstdir)
+
+command = ['make', 'distclean']
+subprocess.call(command)
+
 command = ['./configure', 
     '--prefix=/usr/local/bin',
     '--with-vim-name=vimstudio',

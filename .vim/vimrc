@@ -216,6 +216,7 @@ call CheckYCMConfFile()
 " ------------------------------------------------------------------------
 " 不自动关闭结果窗口
 let g:ctrlsf_auto_close = 0
+let g:ctrlsf_ackprg = 'ack'                                    
 
 function! SearchByInput()
     let curline = getline('.')

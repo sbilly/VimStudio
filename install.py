@@ -102,6 +102,11 @@ for name, ver in submodules.iteritems():
     subprocess.call(['git', 'checkout', v])
     os.chdir(predir)
 
+# for plugin: ack.vim 
+# ---------------------------------------------------
+if 'mac' == envinfo.os_type:
+    subprocess.call(['brew', 'install', 'ack'])
+
 home = os.path.expanduser('~')
 
 '''

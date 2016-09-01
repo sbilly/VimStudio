@@ -126,7 +126,7 @@ gx : 打开超链接
 <a name="">[vim-colorschemes][30-1]</a> <sup>[master][30-2]</sup>  
 *主题*  
 
-<a name="">[vim-dispatch][31-1]</a> <sup>[v1.4][31-2]</sup>  
+<a name="">[vim-dispatch][31-1]</a> <sup>[v0.1.4][31-2]</sup>  
 *XXXX*     
 
 <a name="">[vim-l9][32-1]</a> <sup>[1.1][32-2]</sup>  
@@ -201,7 +201,7 @@ gx : 打开超链接
 [30-1]:https://github.com/flazz/vim-colorschemes
 [30-2]:https://github.com/flazz/vim-colorschemes
 [31-1]:https://github.com/tpope/vim-dispatch  
-[31-2]:https://github.com/tpope/vim-dispatch/releases/tag/v1.4
+[31-2]:https://github.com/tpope/vim-dispatch/releases/tag/v0.1.4
 [32-1]:https://github.com/clones/vim-l9  
 [32-2]:https://github.com/clones/vim-l9/releases/tag/1.1
 [33-1]:https://github.com/clones/vim-fuzzyfinder  

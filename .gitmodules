@@ -122,3 +122,7 @@
 	path = .vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim
 	ignore = all
+[submodule ".vim/bundle/minibufexpl.vim"]
+	path = .vim/bundle/minibufexpl.vim
+	url = https://github.com/fholgado/minibufexpl.vim
+	ignore = all

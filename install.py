@@ -152,6 +152,8 @@ predir = os.getcwd()
 dstdir = './ycm_build' 
 os.chdir(dstdir)
 
+subprocess.call(['rm', '-f', 'CMakeCache.txt'])
+
 python = '/usr/bin/python' + envinfo.python_ver  
 subprocess.call(['cmake', '-G', 'Unix Makefiles', 
     '-DPATH_TO_LLVM_ROOT=../' + decompressdir, 

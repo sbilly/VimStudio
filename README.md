@@ -132,11 +132,11 @@ gx : 打开超链接
 <a name="">[vim-l9][32-1]</a> <sup>[1.1][32-2]</sup>  
 *vim-l9*       
 
-<a name="">[vim-fuzzyfinder][33-1]</a> <sup>[4.2.2][33-2]</sup>  
-*vim-fuzzyfinder*     
+<a name="">[vim-fuzzyfinder][33-1]</a> <sup>[4.2.2][33-2]</sup>    
+*vim-fuzzyfinder*      
 
-<a name="">[minibufexpl.vim][34-1]</a> <sup>[v6.5.2][34-2]</sup>  
-*minibufexpl.vim*     
+<a name="">[minibufexpl.vim][34-1]</a> <sup>[v6.5.2][34-2]</sup>   
+*minibufexpl.vim*      
 
 ## 依赖     
 <a name="llvm">[LLVM][27-1]</a> <sup>[v3.8.0][27-2]</sup>  
@@ -208,6 +208,6 @@ gx : 打开超链接
 [32-1]:https://github.com/clones/vim-l9  
 [32-2]:https://github.com/clones/vim-l9/releases/tag/1.1
 [33-1]:https://github.com/clones/vim-fuzzyfinder  
-[33-2]:https://github.com/clones/vim-fuzzyfinder/releases/tag/4.2.2
-[33-1]:https://github.com/fholgado/minibufexpl.vim 
-[33-2]:https://github.com/fholgado/minibufexpl.vim/releases/tag/v6.5.2 
+[33-2]:https://github.com/clones/vim-fuzzyfinder/releases/tag/4.2.2  
+[34-1]:https://github.com/fholgado/minibufexpl.vim   
+[34-2]:https://github.com/fholgado/minibufexpl.vim/releases/tag/v6.5.2   

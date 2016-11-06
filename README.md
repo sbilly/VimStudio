@@ -130,7 +130,7 @@ gx : 打开超链接
 *XXXX*     
 
 <a name="">[vim-l9][32-1]</a> <sup>[1.1][32-2]</sup>  
-*vim-l9*     
+*vim-l9*       
 
 <a name="">[vim-fuzzyfinder][33-1]</a> <sup>[4.2.2][33-2]</sup>  
 *vim-fuzzyfinder*     

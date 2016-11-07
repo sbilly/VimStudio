@@ -255,24 +255,32 @@ let g:syntastic_check_on_wq = 0
 
 " plugin: nerdtree 
 " ------------------------------------------------------------------------
-" 使用空格键
-let NERDTreeMapActivateNode='<space>'
-" 设置忽略的文件
-let NERDTreeIgnore=['\.o', '\.swp', '\.pyc']
-" 窗口位置在右
-let g:NERDTreeWinPos="right"
-" 窗口宽度
-let g:NERDTreeWinSize=30
-" 只剩下nerdtree窗口时关闭vim
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-" 启动vim时自动打开
-autocmd vimenter * NERDTree
-" 显示隐藏文件
-let NERDTreeShowHidden=1
 " 不显示帮助信息
 let NERDTreeMinimalUI=1
+
+" 窗口宽度
+let g:NERDTreeWinSize=30
+
+" 显示隐藏文件
+let NERDTreeShowHidden=1
+
+" 窗口位置在右
+let g:NERDTreeWinPos="right"
+
+" 启动vim时自动打开
+" autocmd vimenter * NERDTree
+
 " 删除文件时自动删除文件对应的buffer
 let NERDTreeAutoDeleteBuffer=1
+
+" 使用空格键
+let NERDTreeMapActivateNode='<space>'
+
+" 设置忽略的文件
+let NERDTreeIgnore=['\.o', '\.swp', '\.pyc']
+
+" 只剩下nerdtree窗口时关闭vim
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " nnoremap <silent> <F12> :NERDTreeToggle<CR>
 " nnoremap <silent> <C-l> :NERDTreeToggle<CR>

@@ -285,13 +285,18 @@ let NERDTreeIgnore=['\.o', '\.swp', '\.pyc']
 " 只剩下nerdtree窗口时关闭vim
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-nnoremap <silent> <C-l> :NERDTreeToggle<CR>
+fun! ToggleNERDTreeWithRefresh()
+    :NERDTreeToggle
+    if (exists("b:NERDTreeType") == 1) 
+        call feedkeys("R")
+    endif
+endf
+nmap <c-l> :call ToggleNERDTreeWithRefresh()<cr>
 
 " plugin: ultisnips 
 " ------------------------------------------------------------------------
 let g:UltiSnipsSnippetDirectories=["../ultisnips_scripts"] 
 let g:UltiSnipsExpandTrigger="<leader><tab>"
-
 
 " plugin: tagbar
 " ------------------------------------------------------------------------

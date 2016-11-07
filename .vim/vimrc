@@ -261,8 +261,8 @@ let NERDTreeMinimalUI=1
 " 窗口宽度
 let g:NERDTreeWinSize=30
 
-" 显示隐藏文件
-let NERDTreeShowHidden=1
+" 是否显示隐藏文件(1:yes,0:no)
+let NERDTreeShowHidden=0
 
 " 打开文件后自动关闭NerdTree  
 let NERDTreeQuitOnOpen=1

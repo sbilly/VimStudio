@@ -291,7 +291,7 @@ fun! ToggleNERDTreeWithRefresh()
         call feedkeys("R")
     endif
 endf
-nmap <c-l> :call ToggleNERDTreeWithRefresh()<cr>
+nmap <silent> <c-l> :call ToggleNERDTreeWithRefresh()<cr>
 
 " plugin: ultisnips 
 " ------------------------------------------------------------------------

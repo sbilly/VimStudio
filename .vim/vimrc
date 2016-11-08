@@ -216,9 +216,10 @@ noremap <silent> <C-i> :MBEbp<CR>
 " 生成Makefile
 " ------------------------------------------------------------------------
 function! GenerateMakefile()
-    echo system('cmake CMakeLists.txt')
+    :CMakeClean  
+    :CMake 
 endfunction
-nnoremap <S-F7> :call GenerateMakefile()<CR>
+nmap <f6> :call GenerateMakefile()<cr>
 
 " 构建(执行Makefile) 
 " ------------------------------------------------------------------------

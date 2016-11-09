@@ -216,8 +216,15 @@ noremap <silent> <C-i> :MBEbp<CR>
 " 生成Makefile
 " ------------------------------------------------------------------------
 function! GenerateMakefile()
-    :CMakeClean  
-    :CMake 
+python << endpython
+import os
+import vim
+os.system("rm Makefile &> /dev/null")
+os.system("rm CMakeCache.txt &> /dev/null")
+os.system("rm -rf CMakeFiles &> /dev/null")
+os.system("rm cmake_install.cmake &> /dev/null")
+endpython
+:!cmake CMakeLists.txt
 endfunction
 nmap <f6> :call GenerateMakefile()<cr>
 

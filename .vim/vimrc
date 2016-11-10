@@ -419,5 +419,7 @@ nnoremap <S-h> :call ToggleVinarise()<CR>
 
 " plugin: Pyclewn 
 " ------------------------------------------------------------------------
-nmap <silent> <F5> :Pyclewn<CR> :Cmapkeys<CR>
-nmap <silent> <S-F5> :Cexitclewn<CR>
+let g:pyclewn_args="--window=left"
+nmap <silent> <s-f5> :Cexitclewn<cr>
+nmap <silent> <f5> :Pyclewn<cr> :Cmapkeys<cr>
+

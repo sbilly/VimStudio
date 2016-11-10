@@ -81,6 +81,12 @@ source $VIMRUNTIME/ftplugin/man.vim
 " 定义:Man命令查看各类man信息的快捷键(\man)
 nmap <Leader>man :Man 2 <cword><CR>
 
+" 调整窗口大小 
+nnoremap <silent> = :exe "resize " . (winheight(0) * 3/2)<cr>
+nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<cr>
+nnoremap <silent> 0 :exe "vertical resize " . (winwidth(0) * 3/2)<cr>
+nnoremap <silent> 9 :exe "vertical resize " . (winwidth(0) * 2/3)<cr>
+
 " 内容替换
 " ------------------------------------------------------------------------
 " 替换函数,参数说明：

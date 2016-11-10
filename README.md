@@ -75,9 +75,6 @@ gx : 打开超链接
 <a name="">[syntastic][10-1]</a> <sup>[v3.7.0][10-2]</sup>  
 *代码静态分析*
 
-<a name="">[vim-cmake][11-1]</a> <sup>[master][11-2]</sup>  
-*cmake for vim*
-
 <a name="">[vim-airline][12-1]</a> <sup>[v0.8][12-2]</sup>  
 *状态栏显示增强*
 
@@ -126,9 +123,6 @@ gx : 打开超链接
 <a name="">[vim-colorschemes][30-1]</a> <sup>[master][30-2]</sup>  
 *主题*  
 
-<a name="">[vim-dispatch][31-1]</a> <sup>[v0.1.4][31-2]</sup>  
-*XXXX*     
-
 <a name="">[vim-l9][32-1]</a> <sup>[1.1][32-2]</sup>  
 *vim-l9*       
 
@@ -167,8 +161,6 @@ gx : 打开超链接
 [9-2]:https://github.com/msanders/snipmate.vim.git
 [10-1]:https://github.com/scrooloose/syntastic
 [10-2]:https://github.com/scrooloose/syntastic/releases/tag/3.7.0
-[11-1]:https://github.com/vhdirk/vim-cmake.git
-[11-2]:https://github.com/vhdirk/vim-cmake.git
 [12-1]:https://github.com/bling/vim-airline
 [12-2]:https://github.com/vim-airline/vim-airline/releases/tag/v0.8
 [13-1]:https://github.com/majutsushi/tagbar
@@ -203,8 +195,6 @@ gx : 打开超链接
 [27-2]:http://llvm.org/releases/download.html
 [30-1]:https://github.com/flazz/vim-colorschemes
 [30-2]:https://github.com/flazz/vim-colorschemes
-[31-1]:https://github.com/tpope/vim-dispatch  
-[31-2]:https://github.com/tpope/vim-dispatch/releases/tag/v0.1.4
 [32-1]:https://github.com/clones/vim-l9  
 [32-2]:https://github.com/clones/vim-l9/releases/tag/1.1
 [33-1]:https://github.com/clones/vim-fuzzyfinder  

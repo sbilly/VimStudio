@@ -420,6 +420,20 @@ nnoremap <S-h> :call ToggleVinarise()<CR>
 " plugin: Pyclewn 
 " ------------------------------------------------------------------------
 let g:pyclewn_args="--window=left"
-nmap <silent> <s-f5> :Cexitclewn<cr>
-nmap <silent> <f5> :Pyclewn<cr> :Cmapkeys<cr>
 
+fun! StartupPyclewn()
+python << endpython
+import os
+import vim
+f=file("./CMakeFiles/TargetDirectories.txt") 
+s=f.read()
+f.close()
+name=s[0:-5].split('/')[-1]
+vim.command(":Pyclewn")
+vim.command(":Cmapkeys")
+vim.command(":Cfile "+name)
+endpython
+endf
+
+nmap <silent> <f5> :call StartupPyclewn()<cr>
+nmap <silent> <s-f5> :Cexitclewn<cr>

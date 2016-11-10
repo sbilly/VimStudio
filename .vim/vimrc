@@ -230,13 +230,15 @@ nmap <f6> :call GenerateMakefile()<cr>
 
 " 构建(执行Makefile) 
 " ------------------------------------------------------------------------
-" 对vim-dispatch进行包装
 function! Make()
-    :Make
-    :NERDTreeClose
-    :NERDTree
+python << endpython
+import os
+import vim
+os.system("make clean")
+endpython
+:!make 
 endfunction
-nnoremap <F7> :call Make()<CR>
+nmap <f7> :call Make()<cr>
 
 " plugin: vim-airline
 " ------------------------------------------------------------------------

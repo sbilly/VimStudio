@@ -3,7 +3,7 @@ Not visual studio !
 
 Integration vim, zsh, tmux   
 
-![1000](resource/logo_1.png)  
+![1000](http://repository.bj.bcebos.com/VimStudio/logo/logo_1.png)  
 
 [Wiki](https://github.com/xushvai/VimStudio/wiki)
 

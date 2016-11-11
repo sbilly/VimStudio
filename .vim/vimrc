@@ -435,5 +435,18 @@ vim.command(":Cfile "+name)
 endpython
 endf
 
+fun! RunProgramWhithoutPyclewn()
+python << endpython
+import vim
+f=file("./CMakeFiles/TargetDirectories.txt") 
+s=f.read()
+f.close()
+name=s[0:-5].split('/')[-1]
+vim.command(":!./"+name)
+endpython
+endf
+
+nmap <silent> <f4> :Cexitclewn<cr>
 nmap <silent> <f5> :call StartupPyclewn()<cr>
-nmap <silent> <s-f5> :Cexitclewn<cr>
+nmap <silent> <f8> :call RunProgramWhithoutPyclewn()<cr>
+

@@ -27,19 +27,6 @@ python install.py
 /opt/bin/gvimstudio  
 ```
 
-## Usage    
-
-F1: 打开undo tree  
-F2: 生成tag  
-F3: 为当前头文件生成防止重复包含的宏
-
-ctrl + ]: 跳到定义处  
-ctrl + o: 跳回
-
-在buffer标签页上点v键: 将buffer垂直打开
-
-gx : 打开超链接
-
 ## Vim版本
 <a name="">[vim][0-1]</a> <sup>[v7.4][0-2]</sup>  
 

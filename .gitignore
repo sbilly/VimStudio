@@ -3,6 +3,8 @@
 .netrwhist
 *.pyc
 *.swp
+*.swn
+*.swo
 *.vmb
 *.tar.*
 /tags

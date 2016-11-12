@@ -64,14 +64,13 @@ set laststatus=2
 set smartindent
 " 字符编码自动识别
 set fencs=utf-8,cp936
-" 启动vim时不折叠代码
-set nofoldenable
 " 基于缩进进行代码折叠
 set foldmethod=indent
 " 基于语法进行代码折叠
 set foldmethod=syntax
-
-nnoremap <silent> <Space> @=('za')<CR>
+" 从第10000级开始折叠 
+set foldlevel=10000
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 
 " 打开指定路径的文件
 nnoremap <F8> :wincmd f<CR>

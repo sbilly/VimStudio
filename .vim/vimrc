@@ -139,7 +139,7 @@ colorscheme brogrammer
 function! g:HeaderguardName()
 	return "__" . toupper(expand('%:t:gs/[^0-9a-zA-Z_]/_/g')) . "__"
 endfunction 
-nnoremap <F3> :HeaderguardAdd<CR>
+nmap <silent> <F3> :HeaderguardAdd<CR>
 
 " pulgin: gundo
 " ------------------------------------------------------------------------

@@ -70,6 +70,9 @@ set nofoldenable
 set foldmethod=indent
 " 基于语法进行代码折叠
 set foldmethod=syntax
+
+nnoremap <silent> <Space> @=('za')<CR>
+
 " 打开指定路径的文件
 nnoremap <F8> :wincmd f<CR>
 " 执行ctags生成标签文件

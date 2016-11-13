@@ -149,6 +149,17 @@ nnoremap <F1> :GundoToggle<CR>
 let g:gundo_width=60
 let g:gundo_preview_height=20
 
+" plugin: vim-fswitch 
+" ------------------------------------------------------------------------
+nmap <silent> <Leader>sw :FSHere<CR>
+augroup mycppfiles
+    au!
+    au BufEnter *.h let b:fswitchdst = 'cpp,cc,C'
+    au BufEnter *.hpp let b:fswitchdst = 'cpp,cc,C'
+    au BufEnter *.cc let b:fswitchdst = 'h,hpp'
+    au BufEnter *.cpp let b:fswitchdst = 'h,hpp'
+augroup END
+
 " plugin: YouCompleteMe
 " ------------------------------------------------------------------------
 " YCM 补全菜单配色

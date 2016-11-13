@@ -189,6 +189,18 @@ let g:ycm_seed_identifiers_with_syntax=1
 let g:ycm_key_list_select_completion = ['<C-j>']
 let g:ycm_key_list_previous_completion = ['<C-k>']  
 
+" 跳转到声明(Declaration),定义(Definition),头文件(Include)或
+" 实现(Implementation)处，YCM不支持C/C++跳转到实现，首先用
+" YcmCompleter的GoTo命令尝试跳转到声明、定义或者头文件处，若
+" 失败，再尝试vim自带的基于tag的跳转。
+function! GoToDDII()
+    :YcmCompleter GoTo
+    if !v:shell_error
+        call feedkeys("\<C-]>")
+    endif
+endfunction
+nnoremap <Leader>go :call GoToDDII()<CR> 
+
 function! CheckYCMConfFile()
 python << endpython
 import os

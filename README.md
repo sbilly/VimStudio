@@ -102,7 +102,7 @@ python install.py
 *快速移动光标*
 
 <a name="">[ultisnips][26-1]</a> <sup>[v3.1][26-2]</sup>  
-*基于模板的代码补全*
+*插入代码片段*  
 
 <a name="">[vim-colorschemes][30-1]</a> <sup>[master][30-2]</sup>  
 *主题*  

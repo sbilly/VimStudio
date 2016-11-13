@@ -18,10 +18,6 @@
 	path = .vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
 	ignore = all
-[submodule ".vim/bundle/snipmate.vim"]
-	path = .vim/bundle/snipmate.vim
-	url = git://github.com/msanders/snipmate.vim.git
-	ignore = all
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic

@@ -56,9 +56,6 @@ python install.py
 <a name="">[nerdtree][8-1]</a> <sup>[v5.0.0][8-2]</sup>  
 *文件列表*
 
-<a name="">[snipmate.vim][9-1]</a> <sup>[master][9-2]</sup>  
-*快速插入代码片段*
-
 <a name="">[syntastic][10-1]</a> <sup>[v3.7.0][10-2]</sup>  
 *代码静态分析*
 
@@ -144,8 +141,6 @@ python install.py
 [7-2]:https://github.com/scrooloose/nerdcommenter/releases/tag/2.3.0
 [8-1]:https://github.com/scrooloose/nerdtree.git
 [8-2]:https://github.com/scrooloose/nerdtree/releases/tag/5.0.0
-[9-1]:https://github.com/msanders/snipmate.vim.git
-[9-2]:https://github.com/msanders/snipmate.vim.git
 [10-1]:https://github.com/scrooloose/syntastic
 [10-2]:https://github.com/scrooloose/syntastic/releases/tag/3.7.0
 [12-1]:https://github.com/bling/vim-airline

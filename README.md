@@ -81,7 +81,7 @@ python install.py
 *ack.vim*
 
 <a name="">[vim-fswitch][19-1]</a> <sup>[master][19-2]</sup>  
-*快速切换接口与实现文件*
+*快速切换.cpp与.h文件*
 
 <a name="">[vim-auto-save][20-1]</a> <sup>[v0.1.7][20-2]</sup>  
 *自动存储改变*

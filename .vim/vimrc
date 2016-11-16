@@ -145,7 +145,7 @@ nmap <silent> <F3> :HeaderguardAdd<CR>
 
 " pulgin: gundo
 " ------------------------------------------------------------------------
-nnoremap <C-u> :GundoToggle<CR>
+nnoremap <silent> <C-b> :GundoToggle<CR>
 let g:gundo_width=60
 let g:gundo_preview_height=20
 

@@ -114,3 +114,13 @@
 	path = .vim/bundle/minibufexpl.vim
 	url = https://github.com/fholgado/minibufexpl.vim
 	ignore = all
+[submodule ".vim/bundle/vim-multiple-cursors"]
+	path = .vim/bundle/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
+    ignore = all
+
+
+
+
+
+

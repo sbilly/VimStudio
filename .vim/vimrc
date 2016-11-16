@@ -223,15 +223,13 @@ call CheckYCMConfFile()
 let g:ctrlsf_auto_close = 0
 let g:ctrlsf_ackprg = 'ack'                                    
 
-function! SearchByInput()
-    let curline = getline('.')
-    let content = input('Search what: ')
+function! FindByInput()
+    let content = input('Find: ')
     execute "CtrlSF " . content 
 endfunction
 
-" 全局搜索当前光标所在的关键字
-nnoremap <silent> <C-F> :CtrlSF<CR>
-nnoremap <silent> <C-S-F> :call SearchByInput() <CR>
+nnoremap <silent> <S-F> :CtrlSFToggle<CR>
+nnoremap <silent> <C-F> :call FindByInput()<CR>
 
 " plugin: MiniBufExplorer
 " ------------------------------------------------------------------------

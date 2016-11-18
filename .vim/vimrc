@@ -469,6 +469,7 @@ name=s[0:-5].split('/')[-1]
 vim.command(":Pyclewn")
 vim.command(":Cmapkeys")
 vim.command(":Cfile "+name)
+vim.command(":map <S-p> :exe \"Cprint \" . expand(\"<cword>\")<CR>")
 endpython
 endf
 
@@ -486,4 +487,3 @@ endf
 nmap <silent> <f4> :Cexitclewn<cr>
 nmap <silent> <f5> :call StartupPyclewn()<cr>
 nmap <silent> <f8> :call RunProgramWhithoutPyclewn()<cr>
-

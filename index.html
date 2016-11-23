@@ -43,12 +43,309 @@
 
         <p>VimStudio is a C/C++ IDE base on VIM, the inspiration of its name comes from Microsoft VisualStudio. Follow up will be added to the support of GO, Python, node.js and other languages. As you can see, it's a collection of VIM and some utility plug-ins. Actually, it is not only a collection but also an organism.</p>
         <img src="http://repository.bj.bcebos.com/VimStudio/logo/logo_1.png"/>
-        <p>The goal of VimStudio is to do the maximum possible to save the developer's time, you will not have to spend valuable time in the installation or configuration, so you can enjoy the super efficiency of VIM more happily.</p>
+        <p>The goal of VimStudio is to do the maximum possible to save the developer's time, you will not have to spend valuable time in the installation, configuration or find plug-ins, so you can enjoy the super efficiency of VIM more happily.</p>
 
 <h3>
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Demos</h3>
 
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
+<ul>
+    <li><a href="http://www.vimstudio.xyz#1"><strong>1. Common</strong></a></li>
+    <li>
+        <a href="http://www.vimstudio.xyz#2"><strong>2. Coding</strong></a>
+        <ul style="margin-bottom:0px">
+            <li><a href="http://www.vimstudio.xyz#2-1"><em>2.1. Fast moving cursor</em></a>         </li>
+            <li><a href="http://www.vimstudio.xyz#2-2"><em>2.2. Backoff</em></a>      </li>
+            <li><a href="http://www.vimstudio.xyz#2-3"><em>2.3. Content completion</em></a>        </li>
+            <li><a href="http://www.vimstudio.xyz#2-4"><em>2.4. Insert snippet</em></a>        </li>
+            <li><a href="http://www.vimstudio.xyz#2-5"><em>2.5. Comment</em></a>     </li>
+            <li><a href="http://www.vimstudio.xyz#2-6"><em>2.6. Multi-line editing</em></a>            </li>
+            <li><a href="http://www.vimstudio.xyz#2-7"><em>2.7. Search/Replace</em></a>                 </li>
+        </ul>
+    </li>
+    <li>
+        <a href="http://www.vimstudio.xyz#3"><strong>3. Code navigation</strong></a>       
+        <ul style="margin-bottom:0px">
+            <li><a href="http://www.vimstudio.xyz#3-1"><em>3.1. File browser</em></a>        </li>
+            <li><a href="http://www.vimstudio.xyz#3-2"><em>3.2. Go to</em></a>       </li>
+        </ul>
+    </li>
+    <li><a href="http://www.vimstudio.xyz#4"><strong>4. Build</strong></a>        </li>
+    <li><a href="http://www.vimstudio.xyz#5"><strong>5. Debug</strong></a>         </li>
+</ul>
+
+<p><a name="1"></a>1. Common</p>
+<div id="playercontainer1"></div>
+<script type="text/javascript" src="http://sdks.bj.bcebos.com/%E7%99%BE%E5%BA%A6%E4%BA%91%E6%92%AD%E6%94%BE%E5%99%A8Web%E7%89%88/Baidu-T5Player-SDK-Web-v2.1.4/player/cyberplayer.js"></script>
+<script type="text/javascript">
+  var player = cyberplayer("playercontainer1").setup({
+  width : -1,
+  height : 450,
+  backcolor : "#FFFFFF",
+  stretching : "uniform",
+  file : "http://xblog.bj.bcebos.com/VimStudio/video/1.%E7%AA%97%E5%8F%A3%E5%B0%BA%E5%AF%B8%E8%B0%83%E6%95%B4.mp4",     
+  image: "http://xblog.bj.bcebos.com/VimStudio/img/video_1_cover.png",   
+  autoStart : false,
+  repeat : false,
+  volume : 100,
+  controls : "over",
+  ak : "a881f0abf0de4c999cceae4d9578f14e" 
+});
+</script>   
+<p><a name="2"></a>2. Coding</p>
+<p><a name="2-1"></a><i>2.1. Fast moving cursor</i></p>
+<div id="playercontainer2"></div>
+<script type="text/javascript" src="http://sdks.bj.bcebos.com/%E7%99%BE%E5%BA%A6%E4%BA%91%E6%92%AD%E6%94%BE%E5%99%A8Web%E7%89%88/Baidu-T5Player-SDK-Web-v2.1.4/player/cyberplayer.js"></script>
+<script type="text/javascript">
+  var player = cyberplayer("playercontainer2").setup({
+  width : -1,
+  height : 450,
+  backcolor : "#FFFFFF",
+  stretching : "uniform",
+  file : "http://xblog.bj.bcebos.com/VimStudio/video/2.%E5%BF%AB%E9%80%9F%E7%A7%BB%E5%8A%A8%E5%85%89%E6%A0%87.mp4",     
+  image: "http://xblog.bj.bcebos.com/VimStudio/img/video_2_cover.png",   
+  autoStart : false,
+  repeat : false,
+  volume : 100,
+  controls : "over",
+  ak : "a881f0abf0de4c999cceae4d9578f14e" 
+  });
+</script>   
+<p><a name="2-2"></a><i>2.2. Backoff</i></p>
+<div id="playercontainer3"></div>
+<script type="text/javascript" src="http://sdks.bj.bcebos.com/%E7%99%BE%E5%BA%A6%E4%BA%91%E6%92%AD%E6%94%BE%E5%99%A8Web%E7%89%88/Baidu-T5Player-SDK-Web-v2.1.4/player/cyberplayer.js"></script>
+<script type="text/javascript">
+  var player = cyberplayer("playercontainer3").setup({
+  width : -1,
+  height : 450,
+  backcolor : "#FFFFFF",
+  stretching : "uniform",
+  file : "http://xblog.bj.bcebos.com/VimStudio/video/3.%E5%9B%9E%E9%80%80.mp4",      
+  image: "http://xblog.bj.bcebos.com/VimStudio/img/video_3_cover.png",   
+  autoStart : false,
+  repeat : false,
+  volume : 100,
+  controls : "over",
+  ak : "a881f0abf0de4c999cceae4d9578f14e" 
+  });
+</script>   
+<p><a name="2-3"></a><i>2.3. Content completion</i></p>
+<div id="playercontainer4"></div>
+<script type="text/javascript" src="http://sdks.bj.bcebos.com/%E7%99%BE%E5%BA%A6%E4%BA%91%E6%92%AD%E6%94%BE%E5%99%A8Web%E7%89%88/Baidu-T5Player-SDK-Web-v2.1.4/player/cyberplayer.js"></script>
+<script type="text/javascript">
+  var player = cyberplayer("playercontainer4").setup({
+  width : -1,
+  height : 450,
+  backcolor : "#FFFFFF",
+  stretching : "uniform",
+  file : "http://xblog.bj.bcebos.com/VimStudio/video/4.%E5%86%85%E5%AE%B9%E8%A1%A5%E5%85%A8.mp4",      
+  image: "http://xblog.bj.bcebos.com/VimStudio/img/video_4_cover.png",   
+  autoStart : false,
+  repeat : false,
+  volume : 100,
+  controls : "over",
+  ak : "a881f0abf0de4c999cceae4d9578f14e" 
+  });
+</script>   
+<p><a name="2-4"></a><i>2.4. Insert snippet</i></p>
+<div id="playercontainer5"></div>
+<script type="text/javascript" src="http://sdks.bj.bcebos.com/%E7%99%BE%E5%BA%A6%E4%BA%91%E6%92%AD%E6%94%BE%E5%99%A8Web%E7%89%88/Baidu-T5Player-SDK-Web-v2.1.4/player/cyberplayer.js"></script>
+<script type="text/javascript">
+  var player = cyberplayer("playercontainer5").setup({
+  width : -1,
+  height : 450,
+  backcolor : "#FFFFFF",
+  stretching : "uniform",
+  file : "http://xblog.bj.bcebos.com/VimStudio/video/5.%E6%8F%92%E5%85%A5%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5.mp4",     
+  image: "http://xblog.bj.bcebos.com/VimStudio/img/video_5_cover.png",   
+  autoStart : false,
+  repeat : false,
+  volume : 100,
+  controls : "over",
+  ak : "a881f0abf0de4c999cceae4d9578f14e" 
+  });
+</script>   
+<p><a name="2-5"></a><i>2.5. Comment</i></p>
+<div id="playercontainer6"></div>
+<script type="text/javascript" src="http://sdks.bj.bcebos.com/%E7%99%BE%E5%BA%A6%E4%BA%91%E6%92%AD%E6%94%BE%E5%99%A8Web%E7%89%88/Baidu-T5Player-SDK-Web-v2.1.4/player/cyberplayer.js"></script>
+<script type="text/javascript">
+  var player = cyberplayer("playercontainer6").setup({
+  width : -1,
+  height : 450,
+  backcolor : "#FFFFFF",
+  stretching : "uniform",
+  file : "http://xblog.bj.bcebos.com/VimStudio/video/6.%E5%BF%AB%E9%80%9F%E6%B3%A8%E9%87%8A.mp4",      
+  image: "http://xblog.bj.bcebos.com/VimStudio/img/video_6_cover.png",   
+  autoStart : false,
+  repeat : false,
+  volume : 100,
+  controls : "over",
+  ak : "a881f0abf0de4c999cceae4d9578f14e" 
+  });
+</script>   
+<p><a name="2-6"></a><i>2.6. Multi-line editing</i></p>
+<div id="playercontainer7"></div>
+<script type="text/javascript" src="http://sdks.bj.bcebos.com/%E7%99%BE%E5%BA%A6%E4%BA%91%E6%92%AD%E6%94%BE%E5%99%A8Web%E7%89%88/Baidu-T5Player-SDK-Web-v2.1.4/player/cyberplayer.js"></script>
+<script type="text/javascript">
+  var player = cyberplayer("playercontainer7").setup({
+  width : -1,
+  height : 450,
+  backcolor : "#FFFFFF",
+  stretching : "uniform",
+  file : "http://xblog.bj.bcebos.com/VimStudio/video/7.%E5%A4%9A%E8%A1%8C%E7%BC%96%E8%BE%91.mp4",       
+  image: "http://xblog.bj.bcebos.com/VimStudio/img/video_7_cover.png",   
+  autoStart : false,
+  repeat : false,
+  volume : 100,
+  controls : "over",
+  ak : "a881f0abf0de4c999cceae4d9578f14e" 
+  });
+</script>  
+<p><a name="2-7"></a><i>2.7. Search/Replace</i></p>
+<div id="playercontainer8"></div>
+<script type="text/javascript" src="http://sdks.bj.bcebos.com/%E7%99%BE%E5%BA%A6%E4%BA%91%E6%92%AD%E6%94%BE%E5%99%A8Web%E7%89%88/Baidu-T5Player-SDK-Web-v2.1.4/player/cyberplayer.js"></script>
+<script type="text/javascript">
+  var player = cyberplayer("playercontainer8").setup({
+  width : -1,
+  height : 450,
+  backcolor : "#FFFFFF",
+  stretching : "uniform",
+  file : "http://xblog.bj.bcebos.com/VimStudio/video/8.%E6%9F%A5%E6%89%BE%E6%9B%BF%E6%8D%A2-%E6%9F%A5%E6%89%BE.mp4",      
+  image: "http://xblog.bj.bcebos.com/VimStudio/img/video_8_cover.png",   
+  autoStart : false,
+  repeat : false,
+  volume : 100,
+  controls : "over",
+  ak : "a881f0abf0de4c999cceae4d9578f14e" 
+  });
+</script>   
+
+<div id="playercontainer9"></div>
+<script type="text/javascript" src="http://sdks.bj.bcebos.com/%E7%99%BE%E5%BA%A6%E4%BA%91%E6%92%AD%E6%94%BE%E5%99%A8Web%E7%89%88/Baidu-T5Player-SDK-Web-v2.1.4/player/cyberplayer.js"></script>
+<script type="text/javascript">
+  var player = cyberplayer("playercontainer9").setup({
+  width : -1,
+  height : 450,
+  backcolor : "#FFFFFF",
+  stretching : "uniform",
+  file : "http://xblog.bj.bcebos.com/VimStudio/video/9.%E6%9F%A5%E6%89%BE%E6%9B%BF%E6%8D%A2-%E6%9B%BF%E6%8D%A2.mp4",      
+  image: "http://xblog.bj.bcebos.com/VimStudio/img/video_9_cover.png",   
+  autoStart : false,
+  repeat : false,
+  volume : 100,
+  controls : "over",
+  ak : "a881f0abf0de4c999cceae4d9578f14e" 
+  });
+</script>   
+<p><a name="3"></a><i>3. Code navigation</i></p>
+<p><a name="3-1"></a><i>3.1. File browser</i></p>
+<div id="playercontainer10"></div>
+<script type="text/javascript" src="http://sdks.bj.bcebos.com/%E7%99%BE%E5%BA%A6%E4%BA%91%E6%92%AD%E6%94%BE%E5%99%A8Web%E7%89%88/Baidu-T5Player-SDK-Web-v2.1.4/player/cyberplayer.js"></script>
+<script type="text/javascript">
+  var player = cyberplayer("playercontainer10").setup({
+  width : -1,
+  height : 450,
+  backcolor : "#FFFFFF",
+  stretching : "uniform",
+  file : "http://xblog.bj.bcebos.com/VimStudio/video/10.%E4%BB%A3%E7%A0%81%E5%AF%BC%E8%88%AA-%E6%96%87%E4%BB%B6%E6%B5%8F%E8%A7%88.mp4",       
+  image: "http://xblog.bj.bcebos.com/VimStudio/img/video_10_cover.png",   
+  autoStart : false,
+  repeat : false,
+  volume : 100,
+  controls : "over",
+  ak : "a881f0abf0de4c999cceae4d9578f14e" 
+  });
+</script>   
+<p><a name="3-2"></a><i>3.2. Go to</i></p>
+<div id="playercontainer11"></div>
+<script type="text/javascript" src="http://sdks.bj.bcebos.com/%E7%99%BE%E5%BA%A6%E4%BA%91%E6%92%AD%E6%94%BE%E5%99%A8Web%E7%89%88/Baidu-T5Player-SDK-Web-v2.1.4/player/cyberplayer.js"></script>
+<script type="text/javascript">
+  var player = cyberplayer("playercontainer11").setup({
+  width : -1,
+  height : 450,
+  backcolor : "#FFFFFF",
+  stretching : "uniform",
+  file : "http://xblog.bj.bcebos.com/VimStudio/video/11.%E4%BB%A3%E7%A0%81%E5%AF%BC%E8%88%AA-%E8%B7%B3%E8%BD%AC.mp4",      
+  image: "http://xblog.bj.bcebos.com/VimStudio/img/video_11_cover.png",   
+  autoStart : false,
+  repeat : false,
+  volume : 100,
+  controls : "over",
+  ak : "a881f0abf0de4c999cceae4d9578f14e" 
+  });
+</script>   
+<p><a name="4"></a><i>4. Build</i></p>
+<div id="playercontainer12"></div>
+<script type="text/javascript" src="http://sdks.bj.bcebos.com/%E7%99%BE%E5%BA%A6%E4%BA%91%E6%92%AD%E6%94%BE%E5%99%A8Web%E7%89%88/Baidu-T5Player-SDK-Web-v2.1.4/player/cyberplayer.js"></script>
+<script type="text/javascript">
+  var player = cyberplayer("playercontainer12").setup({
+  width : -1,
+  height : 450,
+  backcolor : "#FFFFFF",
+  stretching : "uniform",
+  file : "http://xblog.bj.bcebos.com/VimStudio/video/12.%E6%9E%84%E5%BB%BA.mp4",      
+  image: "http://xblog.bj.bcebos.com/VimStudio/img/video_12_cover.png",   
+  autoStart : false,
+  repeat : false,
+  volume : 100,
+  controls : "over",
+  ak : "a881f0abf0de4c999cceae4d9578f14e" 
+  });
+</script>   
+<p><a name="5"></a><i>5. Debug</i></p>
+<div id="playercontainer13"></div>
+<script type="text/javascript" src="http://sdks.bj.bcebos.com/%E7%99%BE%E5%BA%A6%E4%BA%91%E6%92%AD%E6%94%BE%E5%99%A8Web%E7%89%88/Baidu-T5Player-SDK-Web-v2.1.4/player/cyberplayer.js"></script>
+<script type="text/javascript">
+  var player = cyberplayer("playercontainer13").setup({
+  width : -1,
+  height : 450,
+  backcolor : "#FFFFFF",
+  stretching : "uniform",
+  file : "http://xblog.bj.bcebos.com/VimStudio/video/13.%E8%B0%83%E8%AF%95-%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%AD%E8%B0%83%E8%AF%95%E6%A8%A1%E5%BC%8F.mp4",       
+image: "http://xblog.bj.bcebos.com/VimStudio/img/video_13_cover.png",   
+  autoStart : false,
+  repeat : false,
+  volume : 100,
+  controls : "over",
+ak : "a881f0abf0de4c999cceae4d9578f14e" 
+  });
+</script>   
+
+<div id="playercontainer14"></div>
+<script type="text/javascript" src="http://sdks.bj.bcebos.com/%E7%99%BE%E5%BA%A6%E4%BA%91%E6%92%AD%E6%94%BE%E5%99%A8Web%E7%89%88/Baidu-T5Player-SDK-Web-v2.1.4/player/cyberplayer.js"></script>
+<script type="text/javascript">
+  var player = cyberplayer("playercontainer14").setup({
+  width : -1,
+  height : 450,
+  backcolor : "#FFFFFF",
+  stretching : "uniform",
+  file : "http://xblog.bj.bcebos.com/VimStudio/video/14.%E6%96%AD%E7%82%B9-%E8%BF%90%E8%A1%8C-%E7%BB%A7%E7%BB%AD%E8%BF%90%E8%A1%8C.mp4",        
+  image: "http://xblog.bj.bcebos.com/VimStudio/img/video_14_cover.png",   
+  autoStart : false,
+  repeat : false,
+  volume : 100,
+  controls : "over",
+  ak : "a881f0abf0de4c999cceae4d9578f14e" 
+  });
+</script>   
+
+<div id="playercontainer15"></div>
+<script type="text/javascript" src="http://sdks.bj.bcebos.com/%E7%99%BE%E5%BA%A6%E4%BA%91%E6%92%AD%E6%94%BE%E5%99%A8Web%E7%89%88/Baidu-T5Player-SDK-Web-v2.1.4/player/cyberplayer.js"></script>
+<script type="text/javascript">
+  var player = cyberplayer("playercontainer15").setup({
+  width : -1,
+  height : 450,
+  backcolor : "#FFFFFF",
+  stretching : "uniform",
+  file : "http://xblog.bj.bcebos.com/VimStudio/video/15.%E5%8D%95%E6%AD%A5-%E8%B7%B3%E5%85%A5%E8%B7%B3%E5%87%BA-%E6%89%93%E5%8D%B0%E5%8F%98%E9%87%8F.mp4",       
+  image: "http://xblog.bj.bcebos.com/VimStudio/img/video_15_cover.png",   
+  autoStart : false,
+  repeat : false,
+  volume : 100,
+  controls : "over",
+  ak : "a881f0abf0de4c999cceae4d9578f14e" 
+  });
+</script>    
+
 
 <h3>
 <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
